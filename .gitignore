@@ -9,6 +9,7 @@ db.json
 .DS_Store
 .vscode/
 .coverage
+venv/
 
 # superuser.json stores credentials to login admin
 */fixtures/superuser.json
