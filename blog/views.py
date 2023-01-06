@@ -941,11 +941,11 @@ def portal_employee_progress(request):
             completed_modules = play_sessions.filter(player=player_single).filter(success=True)
 
             players_obj.append({
+                'completed_all_modules': len(completed_modules),
                 'name': player_single.full_name,
                 'email': player_single.email,
                 'registration': registration_type,
-                'all_modules': len(all_modules),
-                'modules_completed': len(completed_modules)
+                'status': len(completed_modules)
             })
         
         context = {'player': player, 'players_obj': players_obj}
