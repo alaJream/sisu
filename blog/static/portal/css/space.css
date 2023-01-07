@@ -3496,6 +3496,13 @@ body:not(.page-sidebar-fixed) .page-sidebar .slimScrollDiv {
     outline-offset: 0;
 }
 
+/* JG Search Bar */
+#search-table {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
 /* Page Content */
 
 .page-content {
