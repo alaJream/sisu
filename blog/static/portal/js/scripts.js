@@ -138,3 +138,7 @@ $(document).ready(function () {
     /* POST PROGRAM SURVEY SCRIPT - END */
 
 })
+// Employee-progress Search
+// function hideIcon(self) {
+//     self.style.backgroundImage = 'none';
+// }

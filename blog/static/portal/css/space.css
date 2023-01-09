@@ -3497,11 +3497,11 @@ body:not(.page-sidebar-fixed) .page-sidebar .slimScrollDiv {
 }
 
 /* JG Search Bar */
-#search-table {
+/* #search-table {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-}
+} */
 
 /* Page Content */
 
