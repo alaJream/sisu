@@ -1,4 +1,4 @@
-#!/Users/jlgonzales/Desktop/sisu/venv/bin/python3
+#!/Users/rosa/Desktop/code/ACS-second-year/ACS-term3/sisu-vr/sisu/venv/bin/python3
 # -*- coding: utf-8 -*-
 # This file is part of pygal
 #

@@ -8,7 +8,7 @@ html {
 
 .logo-box,
 .page-sidebar {
-    width: 280px;
+    width: 285px;
     background: #F7F9FA;
     color: #9F3688 !important;
 }
@@ -62,7 +62,7 @@ html {
 }
 
 .sisu-h3 {
-    color: #9F3688;
+    color: black;
     font-weight: 600;
 }
 

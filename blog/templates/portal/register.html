@@ -66,52 +66,60 @@
                     
                     <!-- Main Content Start -->
                     <div id="main-wrapper">
-                        <div class="row">
+                        <div class="row" style="font-family: 'Jost';">
                             <p>Enter each employee's email address into their corresponding textbox below (VR or Desktop, Non-supervisor, or Supervisor).</p>
                             <p>When you are finished entering each employee's email into the appropriate field, click "<a style="color: #9F3688" href="#send-reg-emails">Register Employees and Send Emails</a>" at the bottom of this page.</p>
                             <hr>
                                 <!-- NOTE - the input of "type=email" and data-role="tagsinput" was causing issues - need to investigate further -->
                                 <div>
-                                    <h3 class="sisu-h3" style="padding-top:26px; padding-bottom: 10px;">1. VR - Non-supervisor</h3>
-                                    <p>Add each employee's email address separated by commas.</p>
+                                    <h3 class="sisu-h3" style="padding-top:26px; padding-bottom: 10px; color: black; font-weight: bold;">1. VR, Non-Supervisor</h3>
+                                    <p>Add each employee’s email address that you would like to register non-supervisor modules using the VR headset.</p>
                                     <!-- <input type="email" data-role="tagsinput" class="form-control" name="vr-nonsupervisor"> -->
-                                    <textarea id="vr-nonsupervisor" class="form-control" name="vr-nonsupervisor"></textarea>
-                                    <!-- hello@email.com, robert@sisuvr.com, test@sisurvr.com -->
+                                    <div class="form-control" style="display: flex; flex-direction: row; justify-content: center; border: 2px solid; border-radius: 25px; color:#9F3688; width: 220px; height: 40px; padding: 5px;">
+                                        <p style="font-size: 20px; padding: 0 20px 0 5px; ">Add an employee</p>
+                                        <button id="vr-nonsupervisor" name="vr-nonsupervisor" style="border: 2px solid #9F3688; border-radius: 25px; height: 25px; background-color: white;">+</button>
+                                    </div>
                                 </div>
                                 <div>
-                                    <h3 class="sisu-h3" style="padding-top:26px; padding-bottom: 10px;">2. VR - Supervisor</h3>
-                                    <p>Add each employee's email address separated by commas.</p>
+                                    <h3 class="sisu-h3" style="padding-top:26px; padding-bottom: 10px; color: black; font-weight: bold;">2. VR, Supervisor</h3>
+                                    <p>Add each employee’s email address that you would like to register for supervisor modules using the VR headset.</p>
                                     <!-- <input type="email" data-role="tagsinput" class="form-control" name="vr-supervisor"> -->
-                                    <textarea id="vr-supervisor" class="form-control" name="vr-supervisor"></textarea>
+                                    <div id="vr-supervisor" class="form-control" name="vr-supervisor" style="display: flex; flex-direction: row; justify-content: center; border: 2px solid; border-radius: 25px; color:#9F3688; width: 220px; height: 40px; padding: 5px;">
+                                        <p style="font-size: 20px; padding: 0 20px 0 5px; ">Add an employee</p>
+                                        <button style="border: 2px solid #9F3688; border-radius: 25px; height: 25px; background-color: white;">+</button>
+                                    </div>
                                 </div>
                                 <div>
-                                    <h3 class="sisu-h3" style="padding-top:26px; padding-bottom: 10px;">3. Desktop - Non-supervisor</h3>
-                                    <p>Add each employee's email address separated by commas.</p>
+                                    <h3 class="sisu-h3" style="padding-top:26px; padding-bottom: 10px; color: black; font-weight: bold;">3. Desktop, Non-Supervisor</h3>
+                                    <p>Add each employee’s email address that you would like to register for non-supervisor modules using a desktop.</p>
                                     <!-- <input type="email" data-role="tagsinput" class="form-control" name="desktop-nonsupervisor"> -->
-                                    <textarea id="desktop-nonsupervisor" class="form-control" name="desktop-nonsupervisor"></textarea>
+                                    <div id="desktop-nonsupervisor" class="form-control" name="desktop-nonsupervisor" style="display: flex; flex-direction: row; justify-content: center; border: 2px solid; border-radius: 25px; color:#9F3688; width: 220px; height: 40px; padding: 5px;">
+                                        <p style="font-size: 20px; padding: 0 20px 0 5px; ">Add an employee</p>
+                                        <button style="border: 2px solid #9F3688; border-radius: 25px; height: 25px; background-color: white;">+</button>
+                                    </div>
                                 </div>
                                 <div>
-                                    <h3 class="sisu-h3" style="padding-top:26px; padding-bottom: 10px;">4. Desktop - Supervisor</h3>
-                                    <p>Add each employee's email address separated by commas.</p>
+                                    <h3 class="sisu-h3" style="padding-top:26px; padding-bottom: 10px; color: black; font-weight: bold;">4. Desktop, Supervisor</h3>
+                                    <p style="font-family: 'Jost';">Add each employee’s email address that you would like to register for supervisor modules using a desktop.</p>
                                     <!-- <input type="email" data-role="tagsinput" class="form-control" name="desktop-supervisor"> -->
-                                    <textarea id="desktop-supervisor" class="form-control" name="desktop-supervisor"></textarea>
+                                    <div id="desktop-supervisor" class="form-control" name="desktop-supervisor" style="display: flex; flex-direction: row; justify-content: center; border: 2px solid; border-radius: 25px; color:#9F3688; width: 220px; height: 40px; padding: 5px;">
+                                        <p style="font-size: 20px; padding: 0 20px 0 5px; ">Add an employee</p>
+                                        <button style="border: 2px solid #9F3688; border-radius: 25px; height: 25px; background-color: white;">+</button>
+                                    </div>
                                 </div>
                                 <div style="padding-bottom: 120px" class="">
                                     <br>
-                                    <button name="send-reg-emails" class="btn btn-sisu-primary bnt-submit" type="">
-                                        Send Registration Emails
+                                    <button name="send-reg-emails" class="btn btn-sisu-primary bnt-submit" style="font-weight: bold; font-size: 20px;">
+                                        Register employees and send registration emails
                                     </button>
 
                                     <div style="width: 350px; margin-top:12px">
                                     
                                     <div id="alert-emails-sent" class="alert alert-success alert-dismissible hidden" role="alert">
-                                    Emails successfully sent.
-                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
-                                </div>
-
+                                        Emails successfully sent.
+                                        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
                                     </div>
                                 </div>
-
                         </div>
                     </div>
                     <!-- Main Content End -->

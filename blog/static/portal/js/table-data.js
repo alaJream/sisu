@@ -4,7 +4,7 @@ $(document).ready(function() {
     $('#edit-employee-reg').dataTable({
         "language": {
             "info": "Showing _START_ to _END_ of _TOTAL_ employees",
-          },
+        },
         "lengthMenu": [[10, 25, 50, -1], [10, 25, 50, "All"]]
     })
 
@@ -13,7 +13,7 @@ $(document).ready(function() {
     $('#employee-progress').DataTable( {
         "language": {
             "info": "Showing _START_ to _END_ of _TOTAL_ employees",
-          },
+        },
 
         initComplete: function () {
             let col_counter = 0;

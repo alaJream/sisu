@@ -1,6 +1,5 @@
 /* Write your custom CSS here */
 
-
 body,
 html {
     font-size: 1rem;
@@ -8,7 +7,7 @@ html {
 
 .logo-box,
 .page-sidebar {
-    width: 280px;
+    width: 285px;
     background: #F7F9FA;
     color: #9F3688 !important;
 }
