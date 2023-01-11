@@ -9,7 +9,8 @@ db.json
 .DS_Store
 .vscode/
 .coverage
-venv/
+/venv
+/venv-django-upgrade
 
 # superuser.json stores credentials to login admin
 */fixtures/superuser.json
