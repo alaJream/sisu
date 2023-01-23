@@ -10,7 +10,7 @@ db.json
 .vscode/
 .coverage
 /venv
-/venv-django-upgrade
+/venv-upgraded
 
 # superuser.json stores credentials to login admin
 */fixtures/superuser.json
