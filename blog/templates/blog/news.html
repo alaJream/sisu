@@ -31,11 +31,11 @@
     <div class="body-inner">
         <!-- Header -->
         <header id="header" data-fullwidth="true" data-responsive-fixed="true" class="header-fixed">
-            <div class="header-inner sisu-header-bkg">
+            <div style="background: rgba(236, 127, 0, 0.09);" class="header-inner sisu-header-bkg">
                 <div class="container">
                   <!--Logo-->
                   <a href="{% url 'home' %}" id="logo">
-                    <img src="{% static 'public/assets/svg/logo-text-light.svg' %}" />
+                    <img src="{% static 'public/assets/svg/logo-text-colored.svg' %}" />
                   </a>
                   <!--End: Logo-->
                   <!--Navigation Resposnive Trigger-->
@@ -44,7 +44,7 @@
                   </div>
                   <!--end: Navigation Resposnive Trigger-->
                   <!--Navigation-->
-                  {% include 'components/new-nav-bar.html' %}
+                  {% include 'components/new-nav-bar-2.html' %}
                   <!--end: Navigation-->
                 </div>
               </div>
