@@ -81,7 +81,7 @@
 </head>
 
 <header id="header" data-fullwidth="true" data-responsive-fixed="true" class="header-fixed">
-  <div style="background: rgba(236, 127, 0, 0.09);" class="header-inner sisu-header-bkg">
+  <div style="background: rgba(236, 127, 0, 0.01); background-blend-mode: darken;" class="header-inner sisu-header-bkg">
     <div class="container">
       <!--Logo-->
       <a href="{% url 'home' %}" id="logo">
@@ -103,40 +103,50 @@
   <!-- Body Inner -->
   <div id="emailModal" class="modal fade">
     <div class="modal-dialog">
-      <div class="my-modal-content">
+      <div class="my-modal-content" style="background-color: rgba(255, 255, 255, 1);
+      background-image: linear-gradient(94.78deg, rgba(245, 185, 66, 0.2) 10.09%, rgba(206, 68, 134, 0.2) 71.99%);">
         <div class="my-modal-top-bar">
-          <button type="button" class="my-modal-button" data-dismiss="modal">
+          <button type="button" class="my-modal-button" data-dismiss="modal" style="margin-top: 50px; margin-right: 50px; color: rgba(209, 76, 132, 1); border-color:  rgba(209, 76, 132, 1);">
             <span>&times;</span>
           </button>
         </div>
         <div class="sisu-modal-image">
-          <image src="{% static 'public/assets/img/sisu-email-logo.png' %}">
+          <image src="{% static 'public/assets/svg/logo-text-colored.svg' %}" style="width: 210px; height: auto; margin-top: -20px;">
           </image>
         </div>
-        <div class="email-banner">
-          Subscribe to Our<br />
-          Free Newsletter!
-        </div>
-        <div style="width: 100%">
-          <form class="site-search" style="width: 100%" method="POST" action=".">
-            {% csrf_token %}
-            <div style="
-                  width: 100%;
-                  display: flex;
-                  flex-direction: column;
-                  align-items: center;
-                ">
-              <input class="my-modal-input" placeholder="Enter email" type="text" name="email_signup" />
-              <span><button class="btn modal-btn" type="submit">
-                  Sign up
-                </button></span>
-            </div>
-            <div>
-              <button type="button" class="email-dismiss" data-dismiss="modal">
-                <span>No, Thank You.</span>
-              </button>
-            </div>
-          </form>
+        <div style="display: flex; align-items: center; justify-self: center; flex-direction: column;">
+          <div class="email-banner" style="text-shadow: none; color: #373F41;display: flex; align-items: center; justify-content: center; flex-direction: column; margin-bottom: 35px; margin-top: -15px;">
+            <div>Take a stand</div>
+            <div>against harassment</div>
+          </div>
+          <div style="width: 100%">
+            <form class="site-search" style="width: 100%" method="POST" action=".">
+              {% csrf_token %}
+              <div style="
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                  ">
+                <!-- create a bullet point list -->
+                <ul style="list-style-type: disc; text-align: left; padding-left: 20px; font-size: 16px; line-height: 20px; padding-top: -15px;">
+                  <li style="margin-bottom: 18px;">Tips on how to handle negative situations in<br> a work environment</li>
+                  <li style="margin-bottom: 18px;">News on how virtual reality is changing how<br> companies train</li>
+                  <li style="margin-bottom: 18px;">Stay up-to-date on how virtual reality is<br> making an impact against harassment</li>
+                </ul>
+                <input class="my-modal-input" placeholder="Enter email address..." type="text" name="email_signup" style="border-radius: 25px; border:none; height: 48px;"/>
+                <span ><button class="btn modal-btn-new" type="submit" style="background: #D14C84;
+                  border-radius: 25px; height: 48px; font-size: 14px; display: flex; align-items: center; border: none;">
+                  Yes, Sign Me Up
+                  </button></span>
+              </div>
+              <div style="margin-top: -10px;">
+                <button type="button" class="email-dismiss" data-dismiss="modal">
+                  <span>No, Thank You.</span>
+                </button>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
     </div>
@@ -173,7 +183,7 @@
     <div id="slider" class="inspiro-slider" style="top: -92px; margin-bottom: -122px">
       <div class="slide"
         style="background: linear-gradient(100.76deg, rgba(160, 55, 137, 0.06) 8.34%, rgba(170, 64, 122, 0.06) 48.23%, rgba(255, 138, 0, 0.2) 86.49%);">
-        <img src="{% static 'public/assets/woman-vr-4.png' %}" style="right: -30px; top: 150px; position: absolute; width: 50%; height: auto;"/>
+        <img src="{% static 'public/assets/woman-vr-4.png' %}" style="right: -30px; bottom: 55px; position: absolute; width: 50%; height: auto;"/>
         <!-- <div
             class="shape-divider"
             data-style="12"
