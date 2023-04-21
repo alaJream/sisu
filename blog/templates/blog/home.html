@@ -75,17 +75,52 @@
   <link rel="stylesheet" href="{% static 'public/css/plugins.css' %}" />
   <link rel="stylesheet" href="{% static 'public/css/style.css' %}" />
   <link rel="stylesheet" href="{% static 'public/css/custom.css' %}" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   {% include 'components/ga-tracking-code.html' %}
+
+  <style>
+    h3 {
+      font-family: 'Mulish';
+      font-weight: 700;
+      font-size: 32px;
+      color: #373F41;
+    }
+
+    div {
+      font-family: 'Mulish';
+    }
+
+    p {
+      font-family: 'Mulish';
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 32px;
+      color: #494949;
+    }
+
+    span {
+      font-family: 'Mulish';
+      font-weight: 400;
+      font-size: 20px;
+    }
+    strong{
+      font-family: 'Mulish';
+      font-weight: 800;
+    }
+  </style>
+
 </head>
 
 <header id="header" data-fullwidth="true" data-responsive-fixed="true" class="header-fixed">
-  <div style="background: rgba(236, 127, 0, 0.01); background-blend-mode: darken;" class="header-inner sisu-header-bkg">
+  <div style="background-image: linear-gradient(100.76deg, rgba(160, 55, 137, 0.06) 8.34%, rgba(170, 64, 122, 0.06) 48.23%, rgba(255, 138, 0, 0.2) 86.49%) " class="header-inner sisu-header-bkg">
     <div class="container">
       <!--Logo-->
       <a href="{% url 'home' %}" id="logo">
-        <img src="{% static 'public/assets/svg/logo-text-colored.svg' %}" />
+        <img src="{% static 'public/assets/sisu_logo.png' %}"  style="width: auto; height: 40px;"/>
       </a>
       <!--End: Logo-->
       <!--Navigation Resposnive Trigger-->
@@ -106,12 +141,13 @@
       <div class="my-modal-content" style="background-color: rgba(255, 255, 255, 1);
       background-image: linear-gradient(94.78deg, rgba(245, 185, 66, 0.2) 10.09%, rgba(206, 68, 134, 0.2) 71.99%);">
         <div class="my-modal-top-bar">
-          <button type="button" class="my-modal-button" data-dismiss="modal" style="margin-top: 50px; margin-right: 50px; color: rgba(209, 76, 132, 1); border-color:  rgba(209, 76, 132, 1);">
-            <span>&times;</span>
+          <button type="button" class="my-modal-button" data-dismiss="modal" style="margin-top: 50px; margin-right: 50px; color: rgba(209, 76, 132, 1); border-color: rgba(209, 76, 132, 1);">
+            <span style="font-size: 25px; display: flex; justify-content: center; align-items: center; margin-top: -3px;">&times;</span>
           </button>
         </div>
+        
         <div class="sisu-modal-image">
-          <image src="{% static 'public/assets/svg/logo-text-colored.svg' %}" style="width: 210px; height: auto; margin-top: -20px;">
+          <image src="{% static 'public/assets/sisu_logo.png' %}" style="width: 210px; height: auto; margin-top: -20px;">
           </image>
         </div>
         <div style="display: flex; align-items: center; justify-self: center; flex-direction: column;">
@@ -253,9 +289,7 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                font-size: 32px;
-                font-weight: 600;
-                color: #373F41;
+                
                 animation-duration: 100ms;
                 ">
               What is Sisu VR?
@@ -263,14 +297,14 @@
             <br>
             <div
               style="font-size: 32px; display: flex; justify-content: center; align-items: center; flex-direction: column; text-align: center;">
-              <p style="font-size: 18px; color: #494949;">
+              <p>
                 Sisu VR offers <strong> immersive and engaging virtual reality (VR) trainings</strong> to ensure your
                 workplace<br> can be safe
                 and harassment-free for your employees.</p>
-              <p style="font-size: 18px; color: #494949;"><strong>Our trainings focus on </strong> topics such as
+              <p><strong>Our trainings focus on </strong> topics such as
                 bullying, sexual harassment,
                 Quid Pro Quo, and how to <br>respond if an active shooter enters the building.</p><br>
-              <p style="font-size: 18px; color: #9F3688"><strong>Let’s work together to empower
+              <p style=" color: #9F3688"><strong>Let’s work together to empower
                   your workforce today.</strong></p><br><br><br><br><br>
             </div>
 
@@ -278,9 +312,6 @@
               display: flex;
               align-items: center;
               justify-content: center;
-              font-size: 32px;
-              font-weight: 600;
-              color: #373F41;
               animation-duration: 100ms;
               ">
               Why Choose Sisu VR Trainings?
@@ -295,46 +326,46 @@
                 "></div>
             <div
               style="font-size: 32px;display: grid; grid-template-columns: 1fr 1fr 1fr; justify-content: center; align-items: center; flex-direction: column; text-align: center; gap: 20px;">
-              <div style="font-size: 14px; color: #494949;">
+              <div style="font-size: 16px; color: #494949; font-weight: 500;">
                 <p><span class="iconify" data-icon="teenyicons:vr-headset-outline" style="color: black;" data-width="50"
                     data-height="50"></span></p>
-                <div style="font-size: 18px; font-weight: 600;">Virtual Reality Technology</div><br>
+                <div style="font-size: 18px; font-weight: 700;">Virtual Reality Technology</div><br>
                 VR trainees learn 4 times faster and are shown to be more
                 confident at applying the skills learned.
               </div>
-              <div style="font-size: 14px; color: #494949;">
+              <div style="font-size: 16px; color: #494949; font-weight: 500;">
                 <p><span class="iconify" data-icon="mdi:clock-outline" style="color: black;" data-width="50"
                     data-height="50"></span></p>
-                <div style="font-size: 18px; font-weight: 600;">20 Minute Modules</div><br>Short module times will
-                guarantee your employee’s get the
+                <div style="font-size: 18px; font-weight: 700;">20 Minute Modules</div><br>Short module times
+                guarantee employee’s get the
                 training they need as efficiently as possible.
               </div>
-              <div style="font-size: 14px; color: #494949;">
+              <div style="font-size: 16px; color: #494949; font-weight: 500;">
                 <p><span class="iconify" data-icon="fluent:certificate-24-regular" style="color: black;" data-width="50"
                     data-height="50"></span></p>
-                <div style="font-size: 18px; font-weight: 600;">Employee Certificates</div><br>Certificates are proven
+                <div style="font-size: 18px; font-weight: 700;">Employee Certificates</div><br>Certificates are proven
                 to be a great way to encourage the
                 completion of trainings.
               </div>
-              <div style="font-size: 14px; color: #494949;">
+              <div style="font-size: 16px; color: #494949; font-weight: 500;">
                 <p><span class="iconify" data-icon="clarity:computer-solid" style="color: black;" data-width="50"
                     data-height="50"></span></p>
-                <div style="font-size: 18px; font-weight: 600;">Accessible Options</div><br>Not a fan of VR? No problem,
+                <div style="font-size: 18px; font-weight: 700;">Accessible Options</div><br>Not a fan of VR? No problem,
                 our trainings can be accessed
                 through a computer and tablet.
               </div>
-              <div style="font-size: 14px; color: #494949;">
+              <div style="font-size: 16px; color: #494949; font-weight: 500;">
                 <p><span class="iconify" data-icon="simple-icons:diagramsdotnet" style="color: black;" data-width="50"
                     data-height="50"></span></p>
-                <div style="font-size: 18px; font-weight: 600;">Ethical Framework</div><br>Ethical framework that allows
+                <div style="font-size: 18px; font-weight: 700;">Ethical Framework</div><br>Ethical framework that allows
                 employees to see how they
                 naturally responded to specific situations.
               </div>
-              <div style="font-size: 14px; color: #494949;">
+              <div style="font-size: 16px; color: #494949; font-weight: 500;">
                 <p><span class="iconify" data-icon="material-symbols:clock-loader-40" style="color: black;"
-                    data-width="50" data-height="50"></span></p>
-                <div style="font-size: 18px; font-weight: 600;">Company Portal</div><br>Monitor your employee’s progress
-                and stay organized.
+                    data-width="50" data-height="50" ></span></p>
+                <div style="font-size: 18px; font-weight: 700;">Company Portal</div><br>Monitor all your employee’s progress
+                and stay organized with our customer portal
               </div>
             </div><br><br><br><br><br><br>
             <hr class="space" />
@@ -383,20 +414,17 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 32px;
-            font-weight: 600;
-            color: #373F41;
             animation-duration: 100ms;
             ">
               Our trainings
             </h3>
             <br><br><br>
             <div
-              style="font-size: 32px;display: grid; grid-template-columns: 1fr 1fr; justify-content: center; align-items: center; flex-direction: column; text-align: center; gap: 180px;">
-              <div style="font-size: 14px; color: #494949;"><img src="{% static '/public/assets/training_1.png' %}"
+              style="font-size: 32px;display: flex;  justify-content: center; align-items: center; flex-direction: row; text-align: center; gap: 180px;">
+              <div style="font-size: 18px; color: #494949;"><img src="{% static '/public/assets/training_1.png' %}"
                   class="card-img-top" alt="..." style="height:240px; width:auto; padding-bottom: 30px;" />
-                <div style="font-size: 32px; font-weight: 600; color: #9F3688;">HR Business Conduct Training</div><br>
-                <div style="font-size: 16px; font-weight: 600; color: #373F41;">Our HR Business Conduct Training can
+                <div style="font-size: 32px; font-weight: 700; color: #9F3688;">HR Business Conduct Training</div><br>
+                <div style="font-size: 18px; font-weight: 700; color: #373F41; line-height: 22px;">Our HR Business Conduct Training can
                   help your
                   employees learn to handle a variety of situations.</div><br>
                 This training can help your employees learn to handle situations such as workplace harassment,
@@ -414,21 +442,23 @@
                   View Training
                 </a>
               </div>
-              <div style="font-size: 14px; color: #494949;"><img src="{% static '/public/assets/training_2.png' %}"
+              <div
+              style="font-size: 32px;display: flex;  justify-content: center; align-items: center; flex-direction: row; text-align: center; gap: 180px;">
+              <div style="font-size: 18px; color: #494949;"><img src="{% static '/public/assets/training_2.png' %}"
                   class="card-img-top" alt="..." style="height:240px; width:auto; padding-bottom: 30px;" />
-                <div style="font-size: 32px; font-weight: 600; color: #9F3688;">Active Shooter Training</div><br>
-                <div style="font-size: 16px; font-weight: 600; color: #373F41;">Our Active Shooter Training can help
+                <div style="font-size: 32px; font-weight: 700; color: #9F3688;">Active Shooter Training</div><br>
+                <div style="font-size: 18px; font-weight: 700; color: #373F41; line-height: 22px;">Our Active Shooter Training can help
                   your employees be prepared for the unimaginable.</div><br>
-                The deadliest situations involve an active shooter. 80% of active shooter incidents occur in the
-                workplace, and 25% of companies are unprepared for active shooter incidents. Don’t let your company be
-                one of them.<br><br> Learn more about how Mindglow Active Shooter Training can help your company be
-                prepared.<br><br><br><br>
+                  The deadliest situations involve an active shooter. 80% of active shooter incidents occur in the
+                  workplace, and 25% of companies are unprepared for active shooter incidents. Do not let your company be
+                  one of them.<br><br> Learn more about how Mindglow Active Shooter Training can help your company be
+                  prepared.<br><br><br><br>
                 <a href="{% url 'enp' %}" class="btn btn-sisu-primary" style="
-                        border-radius: 25px;
-                        border: 1px solid #ced4da;
-                        font-size: 16px;
-                        width: 280px;
-                      " type="submit">
+                          border-radius: 25px;
+                          border: 1px solid #ced4da;
+                          font-size: 16px;
+                          width: 280px;
+                        " type="submit">
                   View Training
                 </a>
               </div>

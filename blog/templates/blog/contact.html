@@ -12,7 +12,7 @@
     <link rel="icon" type="image/png" href="{% static 'public/assets/img/logo-header-colored.png' %}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         .grecaptcha-badge {
             visibility: hidden;
@@ -25,6 +25,7 @@
     <link rel="stylesheet" href="{% static 'public/css/plugins.css' %}" />
     <link rel="stylesheet" href="{% static 'public/css/style.css' %}" />
     <link rel="stylesheet" href="{% static 'public/css/custom.css' %}" />
+    
 
     <script src='https://www.google.com/recaptcha/api.js'></script>
 
@@ -37,11 +38,11 @@
     <div class="body-inner">
         <!-- Header -->
         <header id="header" data-fullwidth="true" data-responsive-fixed="true" class="header-fixed">
-            <div style="background: rgba(236, 127, 0, 0.09);" class="header-inner sisu-header-bkg">
+            <div style="background-image: linear-gradient(94.78deg, rgba(236, 127, 0, 0.06) 99.9%, rgba(236, 127, 0, 0.06) 0.1%); " class="header-inner sisu-header-bkg">
                 <div class="container">
                     <!--Logo-->
                     <a href="{% url 'home' %}" id="logo">
-                        <img src="{% static 'public/assets/svg/logo-text-colored.svg' %}" />
+                        <img src="{% static 'public/assets/sisu_logo.png' %}"  style="width: auto; height: 40px;"/>
                     </a>
                     <!--End: Logo-->
                     <!--Navigation Resposnive Trigger-->

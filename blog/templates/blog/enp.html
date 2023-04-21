@@ -10,6 +10,9 @@
     content="Sisu VR empowers employees to work fearlessly. We offer immersive virtual reality trainings to prepare employees to handle workplace misconduct and active shooter emergencies." />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <link rel="icon" type="image/png" href="{% static 'public/assets/img/logo-header-colored.png' %}" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <script src="{% static 'public/js/custom.js' %}"></script>
   <script type="application/ld+json">
@@ -44,11 +47,13 @@
   <div class="body-inner">
     <!-- Header -->
     <header id="header" data-fullwidth="true" data-responsive-fixed="true" class="header-fixed">
-      <div style="background: rgba(236, 127, 0, 0.09);" class="header-inner sisu-header-bkg">
+      <div
+        style="background-image: linear-gradient(94.78deg, rgba(236, 127, 0, 0.06) 99.9%, rgba(236, 127, 0, 0.06) 0.1%); "
+        class="header-inner sisu-header-bkg">
         <div class="container">
           <!--Logo-->
           <a href="{% url 'home' %}" id="logo">
-            <img src="{% static 'public/assets/svg/logo-text-colored.svg' %}" />
+            <img src="{% static 'public/assets/sisu_logo.png' %}" style="width: auto; height: 40px;" />
           </a>
           <!--End: Logo-->
           <!--Navigation Resposnive Trigger-->
@@ -63,11 +68,33 @@
       </div>
     </header>
     <!-- end: Header -->
+    <style>
+      h3 {
+        font-family: 'Mulish';
+        font-weight: 700;
+      }
+
+      div {
+        font-family: 'Mulish';
+      }
+
+      p {
+        font-family: 'Mulish';
+      }
+
+      span {
+        font-family: 'Mulish';
+        font-weight: 400;
+        font-size: 20px;
+      }
+    </style>
 
     <div>
       <div class="container">
         <div class="sisu-divider-line text-center">
-          <h3 style="font-weight: 600; margin-top: 50px;margin-bottom: 50px; color: black;" class="sisu-color-purple">
+          <h3
+            style="margin-top: 50px;margin-bottom: 50px; color: black; font-size: 34px; font-family: 'Mulish'; font-weight: 700;"
+            class="sisu-color-purple">
             A Closer Look at our Trainings
           </h3>
         </div>
@@ -92,11 +119,6 @@
             Training</h3>
           <div style="font-size: 20px;">Our HR business conduct training can help your employees learn to handle a
             variety of situations effectively.<br></div>
-          <div>30% of workers do not know how to handle bad behavior. This training focuses on common workplace issues
-            such as harassment, discrimination, and bullying. Studies show that this type of behavior can have
-            profound psychological effects including decreased productivity on the victim, increased turnover, and
-            even lawsuits.
-          </div>
         </div>
       </div>
     </div>
@@ -106,7 +128,8 @@
     <div>
       <div class="container">
         <div class="sisu-divider-line text-center">
-          <h3 style="font-weight: 600; margin-top: 50px;margin-bottom: 50px; color: #CE4486;" class="sisu-color-purple">
+          <h3 style="font-weight: 700; margin-top: 50px;margin-bottom: 50px; color: #CE4486; font-size: 29px;"
+            class="sisu-color-purple">
             Training Program Details
           </h3>
         </div>
@@ -124,7 +147,7 @@
     <div
       style="display: flex; flex-direction: row; gap: 100px; height: 321px; width: 100%; align-items: center; justify-content:center;">
       <div id="info"
-        style="display: flex; flex-direction:column; align-items: center; justify-content: center; padding-top: 40px;">
+        style="display: flex; flex-direction:column; align-items: center; justify-content: center; padding-top: 40px; padding-left: 10%;">
         <div>
           <iframe width="100" height="50" src="https://www.youtube.com/embed/WPjf_wDVt7g" title="YouTube video player"
             frameborder="0"
@@ -142,11 +165,16 @@
       </div>
       <div class="text-container-2"
         style="display: flex; flex-direction: column; align-items: flex-start; padding: 5px; margin-left: 20px;">
-        <div style="font-weight: bold;">The program is divided into separate employee training modules*</div>
-        <div>Module 1 - Sexual Harrasment, Hostile Work Environment</div>
-        <div>Module 2 - Sexual Orientation, Gender Identity, Quid Pro </div>
-        <div>Module 3 - Sexual Harrasment, Hostile Work Environment</div>
-        <div>Module 4 - Sexual Harrasment, Hostile Work Environment<br></div>
+        <div style="font-weight: bold; font-weight: 700; font-size: 20px;line-height: 40px;">The program is divided into
+          separate employee training modules*</div>
+        <div style="font-weight: bold; font-weight: 500; font-size: 20px;line-height: 40px;">Module 1 - Sexual
+          Harrasment, Hostile Work Environment</div>
+        <div style="font-weight: bold; font-weight: 500; font-size: 20px;line-height: 40px;">Module 2 - Sexual
+          Orientation, Gender Identity, Quid Pro </div>
+        <div style="font-weight: bold; font-weight: 500; font-size: 20px;line-height: 40px;">Module 3 - Sexual
+          Harrasment, Hostile Work Environment</div>
+        <div style="font-weight: bold; font-weight: 500; font-size: 20px;line-height: 40px;">Module 4 - Sexual
+          Harrasment, Hostile Work Environment<br></div>
         <p><br>*Admin, HR, and manager trainings are also available. </p>
       </div>
     </div>
@@ -156,7 +184,7 @@
     <div>
       <div class="container">
         <div class="sisu-divider-line text-center">
-          <h3 style="font-weight: 600; margin-top: 100px;margin-bottom: 50px; color: #CE4486;"
+          <h3 style="font-weight: 700; margin-top: 100px;margin-bottom: 50px; color: #CE4486; font-size: 29px;"
             class="sisu-color-purple">
             <br><br>Flexibility in Mind
           </h3>
@@ -166,22 +194,22 @@
 
     <div
       style="font-size: 32px;display: grid; grid-template-columns: 1fr 1fr 1fr; justify-content: center; align-items: center; flex-direction: column; text-align: center; gap: 20px;">
-      <div style="font-size: 14px; color: #494949;">
+      <div style="font-size: 16px; color: #494949;">
         <p><span class="iconify" data-icon="clarity:computer-solid" style="color: black;" data-width="50"
             data-height="50"></span></p>
-        <div style="font-size: 18px; font-weight: 600;">Oculus, Pixo, Desktop, Steam</div><br>Modules are provided in a
+        <div style="font-size: 18px; font-weight: 700;">Oculus, Pixo, Desktop, Steam</div><br>Modules are provided in a
         variety of platforms to <br>better suit your organization's resources.
       </div>
-      <div style="font-size: 14px; color: #494949;">
+      <div style="font-size: 16px; color: #494949;">
         <p><span class="iconify" data-icon="simple-icons:diagramsdotnet" style="color: black;" data-width="50"
             data-height="50"></span></p>
-        <div style="font-size: 18px; font-weight: 600;">Time</div><br>Each module is structured to be around 20 minutes
+        <div style="font-size: 18px; font-weight: 700;">Time</div><br>Each module is structured to be around 20 minutes
         <br>long to guarantee employee retention and avoid <br>learning fatigue.
       </div>
-      <div style="font-size: 14px; color: #494949;">
+      <div style="font-size: 16px; color: #494949;">
         <p><span class="iconify" data-icon="material-symbols:clock-loader-40" style="color: black;" data-width="50"
             data-height="50"></span></p>
-        <div style="font-size: 18px; font-weight: 600;">Pricing</div><br>We don’t believe in a one size fits all. Let us
+        <div style="font-size: 18px; font-weight: 700;">Pricing</div><br>We don’t believe in a one size fits all. Let us
         work <br>together to meet a price that suits your organization.
       </div>
     </div>
@@ -191,7 +219,8 @@
     <div>
       <div class="container">
         <div class="sisu-divider-line text-center">
-          <h3 style="font-weight: 600; margin-top: 100px;margin-bottom: 0px; color: #CE4486;" class="sisu-color-purple">
+          <h3 style="font-weight: 700; margin-top: 100px;margin-bottom: 0px; color: #CE4486; font-size: 29px;"
+            class="sisu-color-purple">
             <br><br>Understand Your Employees
           </h3>
         </div>
@@ -218,9 +247,10 @@
       </div>
 
       <div style="padding-right: calc(10%);">
-        <div style="font-size: 32px; line-height: 39px;">Evaluate employee results with an evidence-based <span style="color: 
-          #CE4486;">Ethical Framework<br><br></span></div>
-        <ul style="color: #494949; font-size: 20px;">
+        <div style="font-size: 32px; line-height: 39px; font-weight: 700;">Evaluate employee results with an
+          evidence-based <span style="color: 
+          #CE4486; font-size: 32px; line-height: 39px; font-weight: 700;">Ethical Framework<br><br></span></div>
+        <ul style="color: #494949; font-size: 20px; font-weight: 500;">
           <li style="list-style-type:none; padding-bottom: 15px;">
             <span style="color: #FFC121; font-size: 24px; ">&bull;</span> Track employee progress and obtain critical
             data on organizational performance
@@ -241,7 +271,8 @@
     <div>
       <div class="container">
         <div class="sisu-divider-line text-center">
-          <h3 style="font-weight: 600; margin-top: 100px;margin-bottom: 0px; color: #CE4486;" class="sisu-color-purple">
+          <h3 style="font-weight: 700; margin-top: 100px;margin-bottom: 0px; color: #CE4486; font-size: 29px;"
+            class="sisu-color-purple">
             Stay Organized
           </h3>
         </div>
@@ -252,11 +283,13 @@
       style="display: flex; flex-direction: row; width: 100%; justify-content: center; align-items: center; justify-content: center; padding: 50px;">
 
       <div style="display: flex; flex-direction: column; align-items: flex-start; line-height: 30px;">
-        <div style="font-size: 32px; line-height: 39px; align-self: flex-start;">View your company’s progress through
+        <div style="font-size: 32px; line-height: 39px; align-self: flex-start; font-weight: 700;">View your company’s
+          progress through
           the customer portal<br><br></div>
-        <div style="font-size: 20px; align-self: flex-start;">Customer Portal allows HR Managers keep your
+        <div style="font-size: 20px; align-self: flex-start; font-weight: 500;">Customer Portal allows HR Managers keep
+          your
           company on track and make sure all employees are progressing and completing their training.<br><br></div>
-        <div style="font-size: 20px; align-self: flex-start;">Send notifications and reminders to your
+        <div style="font-size: 20px; align-self: flex-start; font-weight: 500">Send notifications and reminders to your
           employees on trainings incomplete. Just one more tool to make your life easier.</div>
       </div>
 
@@ -307,14 +340,17 @@
         /* Set this to your desired margin-bottom value */
       }
     </style>
-    <div id="intro" style="background: rgba(255, 240, 247, 0.81); width: 100%; height: 321px;">
+    <div id="intro" style="background: rgba(255, 203, 142, 0.24);
+    width: 100%; height: 321px;">
       <div id="info" style="display: flex; align-items: center; width: 100%; height: 100%;">
-        <img src="{% static '/public/assets/training_1.png' %}" alt="HR Business Conduct Training"
+        <img src="{% static '/public/assets/training_2.png' %}" alt="HR Business Conduct Training"
           style="max-width: 200px; margin-right: 100px; margin-left: 200px;" />
         <div class="text-container" style="display: flex; flex-direction: column; align-items: flex-start;">
-          <h3 style="color: #CE4486;font-size: 32px; line-height: 40px;" class="sisu-color-purple">Active Shooter
+          <h3 style="color: #CE4486;font-size: 32px; line-height: 40px; font-size: 32px;" class="sisu-color-purple">
+            Active Shooter
             Training</h3>
-          <div style="font-size: 20px;">The Active Shooter Training offered by Sisu VR is a valuable tool for empowering
+          <div style="font-size: 20px; color:#494949; font-weight: 500;">The Active Shooter Training offered by Sisu VR
+            is a valuable tool for empowering
             and preparing employees for an active shooter situation.<br></div>
         </div>
       </div>
@@ -327,9 +363,11 @@
 
       <div style="display: flex; flex-direction: column; align-items: flex-start; line-height: 30px;">
         <h3 class="sisu-color-purple"
-          style="font-size: 32px; line-height: 39px; align-self: flex-start; color: #CE4486;">Why choose this
+          style=" line-height: 39px; align-self: flex-start; color: #CE4486; font-size: 29px; font-weight: 700;">Why
+          choose this
           training?<br></h3>
-        <div style="font-size: 20px; align-self: flex-start;">This training is designed to help civilians prepare for an
+        <div style="font-size: 20px; align-self: flex-start; font-weight: 500;">This training is designed to help
+          civilians prepare for an
           active<br> shooter situation by providing them with an immersive training.<br><br>
           A virtual environment provides a controlled and secure setting for the<br> training to take place.<br><br>
           This training provides employees with a realistic scenario, allowing<br> them to practice and prepare for a
@@ -350,7 +388,8 @@
     <div>
       <div class="container">
         <div class="sisu-divider-line text-center">
-          <h3 style="font-weight: 600; margin-top: 50px;margin-bottom: 50px; color: #CE4486;" class="sisu-color-purple">
+          <h3 style="font-weight: 700; margin-top: 50px;margin-bottom: 50px; color: #CE4486; font-size: 29px;"
+            class="sisu-color-purple">
             Training Program Details<br>
           </h3>
         </div>
@@ -386,9 +425,10 @@
       </div>
       <div class="text-container-2"
         style="display: flex; flex-direction: column; align-items: flex-start; padding: 5px; margin-left: 20px;">
-        <div style="font-size: 24px; line-height: 30px;">What the Active Shooter Training covers*</div>
+        <div style="font-size: 24px; line-height: 30px; font-weight: 700;">What the Active Shooter Training covers*
+        </div>
         <br>
-        <ul style="color: #494949;; font-size: 20px;">
+        <ul style="color: #494949;; font-size: 20px; font-weight: 500;">
           <li style="list-style-type:none; padding-bottom: 15px;">
             <span style="color: #FFC121; font-size: 24px; ">&bull;</span> Firearm Sounds
           </li>
@@ -416,7 +456,7 @@
     <div>
       <div class="container">
         <div class="sisu-divider-line text-center">
-          <h3 style="font-weight: 600; margin-top: 100px;margin-bottom: 50px; color: #CE4486;"
+          <h3 style="font-weight: 700; margin-top: 100px;margin-bottom: 50px; color: #CE4486; font-size: 29px;"
             class="sisu-color-purple">
             <br><br>Flexibility in Mind
           </h3>
@@ -426,19 +466,19 @@
 
     <div
       style="font-size: 32px;display: grid; grid-template-columns: 1fr 1fr 1fr; justify-content: center; align-items: center; flex-direction: column; text-align: center; gap: 20px;">
-      <div style="font-size: 14px; color: #494949;">
+      <div style="font-size: 16px; color: #494949;">
         <p><span class="iconify" data-icon="clarity:computer-solid" style="color: black;" data-width="50"
             data-height="50"></span></p>
         <div style="font-size: 18px; font-weight: 600;">Oculus, Pixo, Desktop, Steam</div><br>Modules are provided in a
         variety of platforms to <br>better suit your organization's resources.
       </div>
-      <div style="font-size: 14px; color: #494949;">
+      <div style="font-size: 16px; color: #494949;">
         <p><span class="iconify" data-icon="simple-icons:diagramsdotnet" style="color: black;" data-width="50"
             data-height="50"></span></p>
         <div style="font-size: 18px; font-weight: 600;">Time</div><br>Each module is structured to be around 20 minutes
         <br>long to guarantee employee retention and avoid <br>learning fatigue.
       </div>
-      <div style="font-size: 14px; color: #494949;">
+      <div style="font-size: 16px; color: #494949;">
         <p><span class="iconify" data-icon="material-symbols:clock-loader-40" style="color: black;" data-width="50"
             data-height="50"></span></p>
         <div style="font-size: 18px; font-weight: 600;">Pricing</div><br>We don’t believe in a one size fits all. Let us
