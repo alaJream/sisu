@@ -77,7 +77,8 @@
   <link rel="stylesheet" href="{% static 'public/css/custom.css' %}" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   {% include 'components/ga-tracking-code.html' %}
@@ -107,7 +108,8 @@
       font-weight: 400;
       font-size: 20px;
     }
-    strong{
+
+    strong {
       font-family: 'Mulish';
       font-weight: 800;
     }
@@ -116,11 +118,13 @@
 </head>
 
 <header id="header" data-fullwidth="true" data-responsive-fixed="true" class="header-fixed">
-  <div style="background-image: linear-gradient(100.76deg, rgba(160, 55, 137, 0.06) 8.34%, rgba(170, 64, 122, 0.06) 48.23%, rgba(255, 138, 0, 0.2) 86.49%) " class="header-inner sisu-header-bkg">
+  <div
+    style="background-image: linear-gradient(100.76deg, rgba(160, 55, 137, 0.06) 8.34%, rgba(170, 64, 122, 0.06) 48.23%, rgba(255, 138, 0, 0.2) 86.49%) "
+    class="header-inner sisu-header-bkg">
     <div class="container">
       <!--Logo-->
       <a href="{% url 'home' %}" id="logo">
-        <img src="{% static 'public/assets/sisu_logo.png' %}"  style="width: auto; height: 40px;"/>
+        <img src="{% static 'public/assets/sisu_logo.png' %}" style="width: auto; height: 40px;" />
       </a>
       <!--End: Logo-->
       <!--Navigation Resposnive Trigger-->
@@ -134,6 +138,7 @@
     </div>
   </div>
 </header>
+
 <body>
   <!-- Body Inner -->
   <div id="emailModal" class="modal fade">
@@ -141,17 +146,21 @@
       <div class="my-modal-content" style="background-color: rgba(255, 255, 255, 1);
       background-image: linear-gradient(94.78deg, rgba(245, 185, 66, 0.2) 10.09%, rgba(206, 68, 134, 0.2) 71.99%);">
         <div class="my-modal-top-bar">
-          <button type="button" class="my-modal-button" data-dismiss="modal" style="margin-top: 50px; margin-right: 50px; color: rgba(209, 76, 132, 1); border-color: rgba(209, 76, 132, 1);">
-            <span style="font-size: 25px; display: flex; justify-content: center; align-items: center; margin-top: -3px;">&times;</span>
+          <button type="button" class="my-modal-button" data-dismiss="modal"
+            style="margin-top: 50px; margin-right: 50px; color: rgba(209, 76, 132, 1); border-color: rgba(209, 76, 132, 1);">
+            <span
+              style="font-size: 25px; display: flex; justify-content: center; align-items: center; margin-top: -3px;">&times;</span>
           </button>
         </div>
-        
+
         <div class="sisu-modal-image">
-          <image src="{% static 'public/assets/sisu_logo.png' %}" style="width: 210px; height: auto; margin-top: -20px;">
+          <image src="{% static 'public/assets/sisu_logo.png' %}"
+            style="width: 210px; height: auto; margin-top: -20px;">
           </image>
         </div>
         <div style="display: flex; align-items: center; justify-self: center; flex-direction: column;">
-          <div class="email-banner" style="text-shadow: none; color: #373F41;display: flex; align-items: center; justify-content: center; flex-direction: column; margin-bottom: 35px; margin-top: -15px;">
+          <div class="email-banner"
+            style="text-shadow: none; color: #373F41;display: flex; align-items: center; justify-content: center; flex-direction: column; margin-bottom: 35px; margin-top: -15px;">
             <div>Take a stand</div>
             <div>against harassment</div>
           </div>
@@ -165,20 +174,25 @@
                     align-items: center;
                   ">
                 <!-- create a bullet point list -->
-                <ul style="list-style-type: disc; text-align: left; padding-left: 20px; font-size: 16px; line-height: 20px; padding-top: -15px;">
-                  <li style="margin-bottom: 18px;">Tips on how to handle negative situations in<br> a work environment</li>
-                  <li style="margin-bottom: 18px;">News on how virtual reality is changing how<br> companies train</li>
-                  <li style="margin-bottom: 18px;">Stay up-to-date on how virtual reality is<br> making an impact against harassment</li>
+                <ul
+                  style="list-style-type: disc; text-align: left; padding-left: 75px; font-size: 16px; line-height: 20px; padding-top: -15px;">
+                  <li style="margin-bottom: 18px;">Tips on how to handle workplace harassment, discrimination, and
+                    bullying</li>
+                  <li style="margin-bottom: 18px;">Insights on how to prepare and respond to an<br> active shooting</li>
+                  <li style="margin-bottom: 18px;">News on how immersive learning is changing<br> how companies train
+                  </li>
                 </ul>
-                <input class="my-modal-input" placeholder="Enter email address..." type="text" name="email_signup" style="border-radius: 25px; border:none; height: 48px;"/>
-                <span ><button class="btn modal-btn-new" type="submit" style="background: #D14C84;
+                <input class="my-modal-input" placeholder="Enter email address..." type="text" name="email_signup"
+                  style="border-radius: 25px; border:none; height: 48px;" />
+                <span><button class="btn modal-btn-new" type="submit"
+                    style="background: #D14C84;
                   border-radius: 25px; height: 48px; font-size: 14px; display: flex; align-items: center; border: none;">
-                  Yes, Sign Me Up
+                    Yes, Sign Me Up
                   </button></span>
               </div>
               <div style="margin-top: -10px;">
                 <button type="button" class="email-dismiss" data-dismiss="modal">
-                  <span>No, Thank You.</span>
+                  <span style="font-size: small;">No, thank you.</span>
                 </button>
               </div>
             </form>
@@ -213,13 +227,14 @@
       </div>
     </header> -->
     <!-- end: Header -->
-    
+
 
     <!-- Inspiro Slider -->
     <div id="slider" class="inspiro-slider" style="top: -92px; margin-bottom: -122px">
       <div class="slide"
         style="background: linear-gradient(100.76deg, rgba(160, 55, 137, 0.06) 8.34%, rgba(170, 64, 122, 0.06) 48.23%, rgba(255, 138, 0, 0.2) 86.49%);">
-        <img src="{% static 'public/assets/woman-vr-4.png' %}" style="right: -30px; bottom: 55px; position: absolute; width: 50%; height: auto;"/>
+        <img src="{% static 'public/assets/woman-vr-4.png' %}"
+          style="right: -30px; bottom: 55px; position: absolute; width: 50%; height: auto;" />
         <!-- <div
             class="shape-divider"
             data-style="12"
@@ -237,8 +252,8 @@
               ></path>
             </svg>
           </div> -->
-          <img src="{% static 'public/assets/wavy-shape.png' %}" style="position: absolute; bottom: -90px;"/>
-          
+        <img src="{% static 'public/assets/wavy-shape.png' %}" style="position: absolute; bottom: -90px;" />
+
 
         <div class="container">
           <div class="slide-captions text-left text-light-new">
@@ -357,14 +372,15 @@
               <div style="font-size: 16px; color: #494949; font-weight: 500;">
                 <p><span class="iconify" data-icon="simple-icons:diagramsdotnet" style="color: black;" data-width="50"
                     data-height="50"></span></p>
-                <div style="font-size: 18px; font-weight: 700;">Ethical Framework</div><br>Ethical framework that allows
+                <div style="font-size: 18px; font-weight: 700;">Ethical Framework</div><br>Ethical framework allows
                 employees to see how they
                 naturally responded to specific situations.
               </div>
               <div style="font-size: 16px; color: #494949; font-weight: 500;">
                 <p><span class="iconify" data-icon="material-symbols:clock-loader-40" style="color: black;"
-                    data-width="50" data-height="50" ></span></p>
-                <div style="font-size: 18px; font-weight: 700;">Company Portal</div><br>Monitor all your employee’s progress
+                    data-width="50" data-height="50"></span></p>
+                <div style="font-size: 18px; font-weight: 700;">Company Portal</div><br>Monitor all your employee’s
+                progress
                 and stay organized with our customer portal
               </div>
             </div><br><br><br><br><br><br>
@@ -416,7 +432,7 @@
             justify-content: center;
             animation-duration: 100ms;
             ">
-              Our trainings
+              Our Trainings
             </h3>
             <br><br><br>
             <div
@@ -424,7 +440,8 @@
               <div style="font-size: 18px; color: #494949;"><img src="{% static '/public/assets/training_1.png' %}"
                   class="card-img-top" alt="..." style="height:240px; width:auto; padding-bottom: 30px;" />
                 <div style="font-size: 32px; font-weight: 700; color: #9F3688;">HR Business Conduct Training</div><br>
-                <div style="font-size: 18px; font-weight: 700; color: #373F41; line-height: 22px;">Our HR Business Conduct Training can
+                <div style="font-size: 18px; font-weight: 700; color: #373F41; line-height: 22px;">Our HR Business
+                  Conduct Training can
                   help your
                   employees learn to handle a variety of situations.</div><br>
                 This training can help your employees learn to handle situations such as workplace harassment,
@@ -433,66 +450,108 @@
                 workforce.<br><br> Learn more about how HR Business Conduct Training can help you have a safer work
                 environment for
                 everyone.<br><br><br><br>
-                <a href="{% url 'enp' %}" class="btn btn-sisu-primary" style="
-                          border-radius: 25px;
-                          border: 1px solid #ced4da;
-                          font-size: 16px;
-                          width: 280px;
-                        " type="submit">
-                  View Training
-                </a>
+                <button style="
+                  font-size: 20px;
+                  margin-top: -12px;
+                  margin-bottom: 24px;
+                  border-radius: 30px;
+                  height: 50px;
+                  width: 300px;
+                " type="button" class="btn btn-sisu-secondary">
+                  <a href="#training-section" style="color: #ffffff !important">View our Trainings</a>
+                </button>
               </div>
               <div
-              style="font-size: 32px;display: flex;  justify-content: center; align-items: center; flex-direction: row; text-align: center; gap: 180px;">
-              <div style="font-size: 18px; color: #494949;"><img src="{% static '/public/assets/training_2.png' %}"
-                  class="card-img-top" alt="..." style="height:240px; width:auto; padding-bottom: 30px;" />
-                <div style="font-size: 32px; font-weight: 700; color: #9F3688;">Active Shooter Training</div><br>
-                <div style="font-size: 18px; font-weight: 700; color: #373F41; line-height: 22px;">Our Active Shooter Training can help
-                  your employees be prepared for the unimaginable.</div><br>
+                style="font-size: 32px;display: flex;  justify-content: center; align-items: center; flex-direction: row; text-align: center; gap: 180px;">
+                <div style="font-size: 18px; color: #494949;"><img src="{% static '/public/assets/training_2.png' %}"
+                    class="card-img-top" alt="..." style="height:240px; width:auto; padding-bottom: 30px;" />
+                  <div style="font-size: 32px; font-weight: 700; color: #9F3688;">Active Shooter Training</div><br>
+                  <div style="font-size: 18px; font-weight: 700; color: #373F41; line-height: 22px;">Our Active Shooter
+                    Training can help
+                    your employees be prepared for the unimaginable.</div><br>
                   The deadliest situations involve an active shooter. 80% of active shooter incidents occur in the
-                  workplace, and 25% of companies are unprepared for active shooter incidents. Do not let your company be
+                  workplace, and 25% of companies are unprepared for active shooter incidents. Do not let your company
+                  be
                   one of them.<br><br> Learn more about how Mindglow Active Shooter Training can help your company be
                   prepared.<br><br><br><br>
-                <a href="{% url 'enp' %}" class="btn btn-sisu-primary" style="
-                          border-radius: 25px;
-                          border: 1px solid #ced4da;
-                          font-size: 16px;
-                          width: 280px;
-                        " type="submit">
-                  View Training
-                </a>
+                  <button style="
+                  font-size: 20px;
+                  margin-top: -12px;
+                  margin-bottom: 24px;
+                  border-radius: 30px;
+                  height: 50px;
+                  width: 300px;
+                " type="button" class="btn btn-sisu-secondary">
+                  <a href="#training-section" style="color: #ffffff !important">View our Trainings</a>
+                </button>
+                </div>
+              </div>
+
+              <!-- <img src="images/other/550x240.png" class="img-fluid rounded" alt=""> -->
+            </div>
+            <div class="col-lg-6">
+              <!-- <h2>Rounded</h2> -->
+              <!-- <p>Add classes to an <code>&lt;img&gt;</code> element to easily style images in any project.</p> -->
+              <div class="bg-cube-container" style="float: right; margin-right: -180%">
+                <div class="bg-cube-element" style="width: 56px; height: 36px; margin-top: 20%"></div>
               </div>
             </div>
-
-            <!-- <img src="images/other/550x240.png" class="img-fluid rounded" alt=""> -->
           </div>
-          <div class="col-lg-6">
-            <!-- <h2>Rounded</h2> -->
-            <!-- <p>Add classes to an <code>&lt;img&gt;</code> element to easily style images in any project.</p> -->
-            <div class="bg-cube-container" style="float: right; margin-right: -180%">
-              <div class="bg-cube-element" style="width: 56px; height: 36px; margin-top: 20%"></div>
+
+
+          <hr class="space" />
+        </div>
+      </div>
+      <hr class="space" />
+
+    </div>
+
+
+    <!-- Slideshow container -->
+    <div class="slideshow-container">
+      <!-- Full-width images with number and caption text -->
+      <div class="mySlides" style="display: block">
+        <div class="grid-system-demo-live">
+          <div class="row">
+            <div class="col-lg-12 p-t-80 p-b-20">
+              <div class="heading-section">
+                <h3 id="learn-more-3" style="
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            font-weight: 700;
+            color: #373F41;
+            animation-duration: 100ms;
+            ">
+                  Testimonials
+                </h3>
+              </div>
+            </div>
+          </div>
+          <div class="row justify-content-md-center align-items-center" style="height: 200px">
+            <div class="col-lg-12">
+              <p class="text-center" style="padding: 0px 15px; font-size: 24px;">
+                “Sisu VR's training provides a surreal training experience,
+                something I have never personally experienced before. I
+                definitely felt more engaged with Sisu's training package
+                compared to the traditional training methods.”
+              </p><br><br>
+              <p class="text-center" style="font-size: 18px; color:  #494949;">
+                <strong><cite>Robert M.</cite></strong>
+                <br />Founder of SatCatalog
+              </p>
+              <br />
             </div>
           </div>
         </div>
-
-
-        <hr class="space" />
       </div>
-    </div>
-    <hr class="space" />
-
-  </div>
-
-
-  <!-- Slideshow container -->
-  <div class="slideshow-container">
-    <!-- Full-width images with number and caption text -->
-    <div class="mySlides" style="display: block">
-      <div class="grid-system-demo-live">
-        <div class="row">
-          <div class="col-lg-12 p-t-80 p-b-20">
-            <div class="heading-section">
-              <h3 id="learn-more-3" style="
+      <div class="mySlides">
+        <div class="grid-system-demo-live">
+          <div class="row">
+            <div class="col-lg-12 p-t-80 p-b-20">
+              <div class="heading-section">
+                <h3 id="learn-more-3" style="
             display: flex;
             align-items: center;
             justify-content: center;
@@ -501,34 +560,32 @@
             color: #373F41;
             animation-duration: 100ms;
             ">
-                Testimonials
-              </h3>
+                  Testimonials
+                </h3>
+              </div>
+            </div>
+          </div>
+          <div class="row justify-content-md-center align-items-center" style="height: 200px;">
+            <div class="col-lg-12">
+              <p class="text-center" style="padding: 0px 15px;  font-size: 24px;">
+                “Sisu VR is disrupting the market of workplace safety training
+                by brining immersive virtual reality to a field traditionally
+                served by dull and boring training situations.”
+              </p><br><br>
+              <p class="text-center" style="font-size: 18px; color:  #494949;">
+                <strong><cite>Renzo Zagni</cite></strong><br />Founder and CEO of Intelenz
+              </p>
+              <br />
             </div>
           </div>
         </div>
-        <div class="row justify-content-md-center align-items-center" style="height: 200px">
-          <div class="col-lg-12">
-            <p class="text-center" style="padding: 0px 15px; font-size: 24px;">
-              “Sisu VR's training provides a surreal training experience,
-              something I have never personally experienced before. I
-              definitely felt more engaged with Sisu's training package
-              compared to the traditional training methods.”
-            </p><br><br>
-            <p class="text-center" style="font-size: 18px; color:  #494949;">
-              <strong><cite>Robert M.</cite></strong>
-              <br />Founder of SatCatalog
-            </p>
-            <br />
-          </div>
-        </div>
       </div>
-    </div>
-    <div class="mySlides">
-      <div class="grid-system-demo-live">
-        <div class="row">
-          <div class="col-lg-12 p-t-80 p-b-20">
-            <div class="heading-section">
-              <h3 id="learn-more-3" style="
+      <div class="mySlides">
+        <div class="grid-system-demo-live">
+          <div class="row">
+            <div class="col-lg-12 p-t-80 p-b-20">
+              <div class="heading-section">
+                <h3 id="learn-more-3" style="
             display: flex;
             align-items: center;
             justify-content: center;
@@ -537,69 +594,35 @@
             color: #373F41;
             animation-duration: 100ms;
             ">
-                Testimonials
-              </h3>
+                  Testimonials
+                </h3>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="row justify-content-md-center align-items-center" style="height: 200px;">
-          <div class="col-lg-12">
-            <p class="text-center" style="padding: 0px 15px;  font-size: 24px;">
-              “Sisu VR is disrupting the market of workplace safety training
-              by brining immersive virtual reality to a field traditionally
-              served by dull and boring training situations.”
-            </p><br><br>
-            <p class="text-center" style="font-size: 18px; color:  #494949;">
-              <strong><cite>Renzo Zagni</cite></strong><br />Founder and CEO of Intelenz
-            </p>
-            <br />
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="mySlides">
-      <div class="grid-system-demo-live">
-        <div class="row">
-          <div class="col-lg-12 p-t-80 p-b-20">
-            <div class="heading-section">
-              <h3 id="learn-more-3" style="
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 32px;
-            font-weight: 600;
-            color: #373F41;
-            animation-duration: 100ms;
-            ">
-                Testimonials
-              </h3>
+          <div class="row justify-content-md-center align-items-center" style="height: 200px">
+            <div class="col-lg-12">
+              <p class="text-center" style="padding: 0px 15px; font-size: 24px;">
+                “Jocelyn Tan aand her team were amazing to work with &mdash;
+                motivating, passionate and helpful. What more could you ask
+                for?”
+              </p><br><br>
+              <p class="text-center" style="font-size: 18px; color:  #494949;">
+                <strong><cite>Pat Ferris</cite></strong><br />Principal at Pat Ferris Consulting
+              </p>
+              <br />
             </div>
-          </div>
-        </div>
-        <div class="row justify-content-md-center align-items-center" style="height: 200px">
-          <div class="col-lg-12">
-            <p class="text-center" style="padding: 0px 15px; font-size: 24px;">
-              “Jocelyn Tan aand her team were amazing to work with &mdash;
-              motivating, passionate and helpful. What more could you ask
-              for?”
-            </p><br><br>
-            <p class="text-center" style="font-size: 18px; color:  #494949;">
-              <strong><cite>Pat Ferris</cite></strong><br />Principal at Pat Ferris Consulting
-            </p>
-            <br />
-          </div>
 
+          </div>
         </div>
+
       </div>
 
+      <!-- Next and previous buttons -->
+      <a class="prev" onclick="plusSlides(-1)"
+        style="color: #ec7f00; margin-top: -90px; margin-left: -90px; font-size: 45px; padding: 10px 20px; width: auto; height: auto;">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)"
+        style="color: #ec7f00; margin-top: -90px; margin-right: -90px; font-size: 45px; padding: 10px 20px; width: auto; height: auto;">&#10095;</a>
     </div>
-
-    <!-- Next and previous buttons -->
-    <a class="prev" onclick="plusSlides(-1)"
-      style="color: #ec7f00; margin-top: -90px; margin-left: -90px; font-size: 45px; padding: 10px 20px; width: auto; height: auto;">&#10094;</a>
-    <a class="next" onclick="plusSlides(1)"
-      style="color: #ec7f00; margin-top: -90px; margin-right: -90px; font-size: 45px; padding: 10px 20px; width: auto; height: auto;">&#10095;</a>
-  </div>
   </div>
 
 

@@ -1,5 +1,5 @@
 from __future__ import unicode_literals
-from .models import LinkedinPost, MediumPost
+from .models import LinkedinPost, MediumPost, Pres
 import sendgrid
 import os, urllib
 import requests, json
@@ -1795,14 +1795,19 @@ def news_view(request, *args, **kwargs):
 
     latest_linked_in_post_list = LinkedinPost.objects.order_by('-pub_date')[:3]
     latest_medium_post_list = MediumPost.objects.order_by('-pub_date_m')[:4]
+    latest_pres_post_list = Pres.objects.order_by('-pub_date_p')[:4]
 
     template = loader.get_template('blog/news.html')
     context = {
         'latest_linked_in_post_list': latest_linked_in_post_list,
         'latest_medium_post_list': latest_medium_post_list,
+        'latest_pres_post_list': latest_pres_post_list
     }
     for post in latest_medium_post_list:
          print(post.m_photo.url)
+    
+    for post in latest_pres_post_list:
+         print(post.p_photo.url)
 
     return HttpResponse(template.render(context, request))
 
