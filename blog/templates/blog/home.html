@@ -482,8 +482,8 @@
                   height: 50px;
                   width: 300px;
                 " type="button" class="btn btn-sisu-secondary">
-                  <a href="#training-section" style="color: #ffffff !important">View our Trainings</a>
-                </button>
+                    <a href="#training-section" style="color: #ffffff !important">View our Trainings</a>
+                  </button>
                 </div>
               </div>
 
@@ -659,7 +659,7 @@
       <div class="heading-text heading-line text-center">
         <h4><br><br><br><br><br>Our Partners<br><br><br></h4>
       </div>
-      <div class="row team-members m-b-40">
+      <div class="row team-members" style="display: grid; grid-template-columns: 1fr 1fr 1fr; ">
         <div class="col-sm">
           <div class="team-member">
             <div class="team-image">
@@ -703,8 +703,18 @@
             </div>
           </div>
         </div>
-      </div>
-      <div class="row justify-content-md-center center-container">
+        <div class="col-sm">
+          <div class="team-member">
+            <div class="team-image">
+              <a href="https://www.boozallen.com/" target="_blank"><img
+                  src="{% static 'public/assets/gray_matter.png' %}" alt="Gray Matter Growth"
+                  style="width: 138px" /></a>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="row justify-content-md-center center-container">
   </section>
   <!-- Cookies -->
   <div id="consent-popup" class="hidden">
