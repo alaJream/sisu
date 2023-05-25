@@ -29,6 +29,8 @@
     </script>
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
 
   <!--<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.0/jquery.cookie.min.js">
 </script>
@@ -79,6 +81,16 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700;800&display=swap"
     rel="stylesheet">
+  <!-- Add slick CSS -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+
+  <!-- Add slick theme CSS -->
+  <link rel="stylesheet" type="text/css"
+    href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+
+  <!-- Add slick JS -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   {% include 'components/ga-tracking-code.html' %}
@@ -482,7 +494,7 @@
                   height: 50px;
                   width: 300px;
                 " type="button" class="btn btn-sisu-secondary">
-                    <a href="enp/#ASP" style="color: #ffffff !important">View Our Trainings</a>
+                    <a href="enp/#AST" style="color: #ffffff !important">View Our Trainings</a>
                   </button>
                 </div>
               </div>
@@ -637,7 +649,7 @@
 
       <div class="row justify-content-md-center center-container">
         <div class="col-lg-12">
-          <h3 class="text-center" style="font-weight: 500; color: #494949; font-size: large;  margin-top: 100px;">
+          <h3 class="text-center" style="font-weight: 500; color: #494949; font-size: large;  margin-top: 70px;">
             Take one step closer to a safe and empowered workplace
           </h3>
         </div>
@@ -655,8 +667,120 @@
         </button>
       </div>
 
-
       <div class="heading-text heading-line text-center">
+        <h4><br><br><br>Our Partners<br><br><br></h4>
+    </div>
+    <style>
+      .slick-prev:before, .slick-next:before {
+          color: #EC7F00 !important;
+      }
+      .slick-next, .slick-prev {
+          background: #ffffff;
+          height: 30px;
+          width: 30px;
+          display: block !important;
+      }
+      .slick-next:before, .slick-prev:before {
+          font-size: 40px;
+      }
+      </style>
+
+  <style>
+      .team-members {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        justify-content: space-evenly;
+        gap: 50px;
+      }
+
+      .slick-prev, .slick-next {
+        z-index: 1;
+        top: 50%;
+        width: auto;
+        height: auto;
+        transform: translate(0, -50%);
+      }
+
+      .slick-prev {
+        left: 20px;
+      }
+
+      .slick-next {
+        right: 20px;
+      }
+
+      .slick-prev:before, .slick-next:before {
+        color: #EC7F00 !important;
+      }
+    </style>
+    <!-- Start the slider -->
+    <div class="slider">
+
+        <!-- Slide 1 -->
+        <div>
+            <div class="row team-members">
+                <!-- Image 1 -->
+                <div>
+                  <!-- your content here -->
+                  <a href="https://www.mindglowinc.com/" target="_blank"><img
+                  src="{% static 'public/assets/img/partner-02.png' %}" alt="MindGlow Inc." style="width: 138px" /></a>
+                </div>
+
+                <!-- Image 2 -->
+                <div>
+                  <!-- your content here -->
+                  <a href="https://www.redlinevr.com/" target="_blank"><img
+                  src="{% static 'public/assets/img/partner-logo-redlinevr.jpg' %}" alt="Redline VR"
+                  style="width: 138px" /></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div>
+            <div class="row team-members">
+                <!-- Image 3 -->
+                <div>
+                    <a href="https://www.opensesame.com/" target="_blank"><img
+                        src="{% static 'public/assets/img/partner-logo-opensesame.png' %}" alt="OpenSesame"
+                        style="width: 300px" /></a>
+
+                </div>
+
+                <!-- Image 4 -->
+                <div>
+                    <a href="https://theeplex.com/" target="_blank"><img
+                        src="{% static 'public/assets/img/partner-logo-eplex.png' %}" alt="EPlex" style="width: 138px" /></a>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <div class="row team-members">
+                <!-- Image 5 -->
+                <div>
+                    <a href="https://www.boozallen.com/" target="_blank"><img
+                        src="{% static 'public/assets/img/partner-logo-boozallen.png' %}" alt="Booz Allen"
+                        style="width: 138px" /></a>
+
+                </div>
+
+                <!-- Image 6 -->
+                <div>
+                    <a href="https://www.boozallen.com/" target="_blank"><img
+                        src="{% static 'public/assets/gray_matter.png' %}" alt="Gray Matter Growth"
+                        style="width: 138px" /></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- More slides... -->
+
+    </div>
+
+
+      <!-- <div class="heading-text heading-line text-center">
         <h4><br><br><br><br><br>Our Partners<br><br><br></h4>
       </div>
       <div class="row team-members" style="display: grid; grid-template-columns: 1fr 1fr 1fr; ">
@@ -711,7 +835,7 @@
                   style="width: 138px" /></a>
             </div>
           </div>
-        </div>
+        </div> -->
 
 
         <div class="row justify-content-md-center center-container">
@@ -815,6 +939,19 @@
     };
   </script>
   <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $('.slider').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        prevArrow: '<button type="button" class="slick-prev" style="color: #EC7F00">Previous</button>',
+        nextArrow: '<button type="button" class="slick-next" style="color: #EC7F00">Next</button>',
+      });
+    });
+  </script>
+
 </body>
 
 </html>
