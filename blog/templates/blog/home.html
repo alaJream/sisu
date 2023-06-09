@@ -96,6 +96,7 @@
   {% include 'components/ga-tracking-code.html' %}
 
   <style>
+
     h3 {
       font-family: 'Mulish';
       font-weight: 700;
@@ -324,15 +325,15 @@
             <br>
             <div
               style="font-size: 32px; display: flex; justify-content: center; align-items: center; flex-direction: column; text-align: center;">
-              <p>
-                Sisu VR offers <strong> immersive and engaging virtual reality (VR) trainings</strong> to ensure your
-                workplace<br> can be safe
-                and harassment-free for your employees.</p>
-              <p><strong>Our trainings focus on </strong> topics such as
+              <p style=" color: #9F3688"><strong>Sisu VR offers immersive and engaging virtual reality (VR) trainings to
+                  ensure your
+                  workplace<br> can be safe
+                  and harassment-free for your employees.</strong></p>
+              <p>Our trainings focus on topics such as
                 bullying, sexual harassment,
                 Quid Pro Quo, and how to <br>respond if an active shooter enters the building.</p><br>
-              <p style=" color: #9F3688"><strong>Let’s work together to empower
-                  your workforce today.</strong></p><br><br><br><br><br>
+              <p>Let’s work together to empower
+                your workforce today.</p><br><br><br><br><br>
             </div>
 
             <h3 id="learn-more-2" style="
@@ -377,8 +378,8 @@
               <div style="font-size: 16px; color: #494949; font-weight: 500;">
                 <p><span class="iconify" data-icon="clarity:computer-solid" style="color: black;" data-width="50"
                     data-height="50"></span></p>
-                <div style="font-size: 18px; font-weight: 700;">Accessible Options</div><br>Not a fan of VR? No problem,
-                our trainings can be accessed
+                <div style="font-size: 18px; font-weight: 700;">Accessible Options</div><br>Not a fan of VR? No problem.
+                Our trainings can be accessed
                 through a computer and tablet.
               </div>
               <div style="font-size: 16px; color: #494949; font-weight: 500;">
@@ -452,10 +453,9 @@
               <div style="font-size: 18px; color: #494949;"><img src="{% static '/public/assets/training_1.png' %}"
                   class="card-img-top" alt="..." style="height:240px; width:auto; padding-bottom: 30px;" />
                 <div style="font-size: 32px; font-weight: 700; color: #9F3688;">HR Business Conduct Training</div><br>
-                <div style="font-size: 18px; font-weight: 700; color: #373F41; line-height: 22px;">Our HR Business
-                  Conduct Training can
-                  help your
-                  employees learn to handle a variety of situations.</div><br>
+                <div style="font-size: 18px; font-weight: 700; color: #373F41; line-height: 22px;">Sexual harrassment to
+                  bullying, our HR Business Conduct Training can
+                  help your employees learn to handle a variety of situations.</div><br>
                 This training can help your employees learn to handle situations such as workplace harassment,
                 discrimination,
                 and bullying. Avoid decreased productivity, increased turnover, and even lawsuits due to problems in the
@@ -669,115 +669,139 @@
 
       <div class="heading-text heading-line text-center">
         <h4><br><br><br>Our Partners<br><br><br></h4>
-    </div>
-    <style>
-      .slick-prev:before, .slick-next:before {
+      </div>
+      <style>
+        .slick-prev:before,
+        .slick-next:before {
           color: #EC7F00 !important;
-      }
-      .slick-next, .slick-prev {
+        }
+
+        .slick-next,
+        .slick-prev {
           background: #ffffff;
           height: 30px;
           width: 30px;
           display: block !important;
-      }
-      .slick-next:before, .slick-prev:before {
+        }
+
+        .slick-next:before,
+        .slick-prev:before {
           font-size: 40px;
-      }
+        }
       </style>
 
-  <style>
-      .team-members {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        justify-content: space-evenly;
-        gap: 50px;
-      }
+      <style>
+        .team-members {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          justify-content: space-evenly;
+          gap: 50px;
+        }
 
-      .slick-prev, .slick-next {
-        z-index: 1;
-        top: 50%;
-        width: auto;
-        height: auto;
-        transform: translate(0, -50%);
-      }
+        .slick-prev,
+        .slick-next {
+          z-index: 1;
+          top: 50%;
+          width: auto;
+          height: auto;
+          transform: translate(0, -50%);
+        }
 
-      .slick-prev {
-        left: 20px;
-      }
+        .slick-prev {
+          left: 20px;
+        }
 
-      .slick-next {
-        right: 20px;
-      }
+        .slick-next {
+          right: 20px;
+        }
 
-      .slick-prev:before, .slick-next:before {
-        color: #EC7F00 !important;
-      }
-    </style>
-    <!-- Start the slider -->
-    <div class="slider">
+        .slick-prev:before,
+        .slick-next:before {
+          color: #EC7F00 !important;
+        }
+      </style>
+      <!-- Start the slider -->
+      <div class="slider">
 
         <!-- Slide 1 -->
         <div>
-            <div class="row team-members">
-                <!-- Image 1 -->
-                <div>
-                  <!-- your content here -->
-                  <a href="https://www.mindglowinc.com/" target="_blank"><img
+          <div class="row team-members">
+            <!-- Image 1 -->
+            <div>
+              <!-- your content here -->
+              <a href="https://www.mindglowinc.com/" target="_blank"><img
                   src="{% static 'public/assets/img/partner-02.png' %}" alt="MindGlow Inc." style="width: 138px" /></a>
-                </div>
+            </div>
 
-                <!-- Image 2 -->
-                <div>
-                  <!-- your content here -->
-                  <a href="https://www.redlinevr.com/" target="_blank"><img
+            <!-- Image 2 -->
+            <div>
+              <!-- your content here -->
+              <a href="https://www.redlinevr.com/" target="_blank"><img
                   src="{% static 'public/assets/img/partner-logo-redlinevr.jpg' %}" alt="Redline VR"
                   style="width: 138px" /></a>
-                </div>
             </div>
+          </div>
         </div>
 
         <!-- Slide 2 -->
         <div>
-            <div class="row team-members">
-                <!-- Image 3 -->
-                <div>
-                    <a href="https://www.opensesame.com/" target="_blank"><img
-                        src="{% static 'public/assets/img/partner-logo-opensesame.png' %}" alt="OpenSesame"
-                        style="width: 300px" /></a>
+          <div class="row team-members">
+            <!-- Image 3 -->
+            <div>
+              <a href="https://www.opensesame.com/" target="_blank"><img
+                  src="{% static 'public/assets/img/partner-logo-opensesame.png' %}" alt="OpenSesame"
+                  style="width: 300px" /></a>
 
-                </div>
-
-                <!-- Image 4 -->
-                <div>
-                    <a href="https://theeplex.com/" target="_blank"><img
-                        src="{% static 'public/assets/img/partner-logo-eplex.png' %}" alt="EPlex" style="width: 138px" /></a>
-                </div>
             </div>
+
+            <!-- Image 4 -->
+            <div>
+              <a href="https://theeplex.com/" target="_blank"><img
+                  src="{% static 'public/assets/img/partner-logo-eplex.png' %}" alt="EPlex" style="width: 138px" /></a>
+            </div>
+          </div>
         </div>
 
+        <!-- Slide 3 -->
+
         <div>
-            <div class="row team-members">
-                <!-- Image 5 -->
-                <div>
-                    <a href="https://www.boozallen.com/" target="_blank"><img
-                        src="{% static 'public/assets/img/partner-logo-boozallen.png' %}" alt="Booz Allen"
-                        style="width: 138px" /></a>
+          <div class="row team-members">
+            <!-- Image 5 -->
+            <div>
+              <a href="https://www.boozallen.com/" target="_blank"><img
+                  src="{% static 'public/assets/img/partner-logo-boozallen.png' %}" alt="Booz Allen"
+                  style="width: 138px" /></a>
 
-                </div>
-
-                <!-- Image 6 -->
-                <div>
-                    <a href="https://www.boozallen.com/" target="_blank"><img
-                        src="{% static 'public/assets/gray_matter.png' %}" alt="Gray Matter Growth"
-                        style="width: 138px" /></a>
-                </div>
             </div>
+
+            <!-- Image 6 -->
+            <div>
+              <a href="https://www.boozallen.com/" target="_blank"><img
+                  src="{% static 'public/assets/gray_matter.png' %}" alt="Gray Matter Growth"
+                  style="width: 138px" /></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 4 -->
+        <div>
+          <div class="row team-members">
+            <!-- Image 1 -->
+            <div>
+              <!-- your content here -->
+              <a href="https://www.360immersive.com/" target="_blank"><img
+                  src="{% static 'public/assets/img/360-logo.jpg' %}" alt="360-logo" style="width: 138px" /></a>
+            </div>
+
+            <!-- Image 2 -->
+
+          </div>
         </div>
 
         <!-- More slides... -->
 
-    </div>
+      </div>
 
 
       <!-- <div class="heading-text heading-line text-center">
@@ -838,7 +862,7 @@
         </div> -->
 
 
-        <div class="row justify-content-md-center center-container">
+      <div class="row justify-content-md-center center-container">
   </section>
   <!-- Cookies -->
   <div id="consent-popup" class="hidden">
