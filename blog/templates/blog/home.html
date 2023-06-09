@@ -96,7 +96,6 @@
   {% include 'components/ga-tracking-code.html' %}
 
   <style>
-
     h3 {
       font-family: 'Mulish';
       font-weight: 700;
@@ -178,7 +177,7 @@
             <div>against harassment</div>
           </div>
           <div style="width: 100%">
-            <form class="site-search" style="width: 100%" method="POST" action=".">
+            <form class="site-search" style="width: 100%" method="POST" action="." id="myForm">
               {% csrf_token %}
               <div style="
                     width: 100%;
@@ -195,6 +194,7 @@
                   <li style="margin-bottom: 18px;">News on how immersive learning is changing<br> how companies train
                   </li>
                 </ul>
+                <div id="email-error" style="color: red; display: none;"></div>
                 <input class="my-modal-input" placeholder="Enter email address..." type="text" name="email_signup"
                   style="border-radius: 25px; border:none; height: 48px;" />
                 <span><button class="btn modal-btn-new" type="submit"
@@ -975,6 +975,23 @@
       });
     });
   </script>
+  <script>
+    document.getElementById('myForm').addEventListener('submit', function(event) {
+      var emailInput = document.querySelector('input[name="email_signup"]');
+      var emailValue = emailInput.value;
+      var emailError = document.getElementById("email-error");
+    
+      // if email is empty or does not contain @
+      if (!emailValue.includes('@')) {
+        emailError.style.display = 'block';
+        emailError.innerText = "Please add an '@' in the email address.";
+        event.preventDefault(); // Prevent the form from submitting
+      } else {
+        emailError.style.display = 'none';
+        emailError.innerText = "";
+      }
+    });
+    </script>
 
 </body>
 
