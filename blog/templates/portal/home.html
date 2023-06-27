@@ -24,6 +24,35 @@
         <link rel="stylesheet" href="{% static 'portal/css/space.min.css' %}" />
         <link rel="stylesheet" href="{% static 'portal/css/custom.css' %}" />
     </head>
+
+    <style>
+        .modal-body {
+            max-height: calc(100vh - 210px);
+            overflow-y: auto;
+        }
+    
+        .hidden {
+            display: none;
+        }
+    
+        .state-link {
+        text-decoration: underline;
+        color: blue;
+        }
+
+        
+        .state-list {
+            display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-auto-rows: minmax(50px, auto);
+    gap: 15px;
+
+    padding: 5; /* optional: remove padding */
+    }
+
+
+    </style>
+
     <body>
 
         <!-- Page Container -->
@@ -138,10 +167,225 @@
                                                 {% if player.supervisor is True %}
                                                     <a style="margin-top:10px; display: block; width: 150px;" type="button" class="btn btn-sisu-primary" href="{% url 'ethical_report' pk='team_report' %}" target="_blank">See team results</a>
                                                     <br/>
-                                                    <a style="margin-top:10px; display: block; width: 150px;" type="button" class="btn btn-sisu-primary" href="{% url 'post_program_survey' pk='supervisor' %}" target="_blank">Print certificate</a>
+                                                    <div class="container">
+                                                        <p>Please review the federal and the state's workplace conduct regulations
+                                                            <a href="#" data-toggle="modal" data-target="#termsModal"><u>here</u></a>
+                                                            before printing your certificate.
+                                                        </p>
+                                                        <a style="margin-top:10px; display: block; width: 150px;" id="printBtn" type="button"
+                                                            class="btn btn-sisu-primary hidden"
+                                                            href="{% url 'post_program_survey' pk='supervisor' %}" target="_blank">Print
+                                                            certificate</a>
+                            
+                                                        <!-- Modal -->
+                                                        <div class="modal fade" id="termsModal" tabindex="-1" role="dialog"
+                                                            aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                            <div class="modal-dialog" role="document">
+                                                                <div class="modal-content">
+                                                                    <div class="modal-header">
+                                                                        <h3 class="modal-title" id="exampleModalLabel">Workplace Conduct Regulations Agreement</h3>
+                                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                            <span aria-hidden="true">&times;</span>
+                                                                        </button>
+                                                                        
+                                                                    </div>
+                                                                    <div>
+                                                                        <button id="backBtn" style="display: block; width: 100px; margin: auto"
+                                                                    class="btn btn-sisu-primary" >Back</button>
+                                                                    </div>
+                                                                    
+                                                                    <div class="modal-body">
+                                                                        <!-- Put your Terms and Conditions content here -->
+                                                                        <!-- In real case, the height of this block is what determines whether checkbox and continue button is shown or not -->
+                                                                        <div id="stateLinks" >
+                                                                            <ul >
+                                                                                <!-- <div class="state-column"> -->
+                                                                                <li><a href="#" class="state-link" data-state="Alabama">Alabama</a></li>
+                                                                                <li><a href="#" class="state-link" data-state="Alaska">Alaska</a></li>
+                                                                                <li><a href="#" class="state-link" data-state="Arizona">Arizona</a></li>
+                                                                                <li><a href="#" class="state-link" data-state="Arkansas">Arkansas</a></li>
+                                                                                <li><a href="#" class="state-link" data-state="California">California</a></li>
+                                                                                <li><a href="#" class="state-link" data-state="Colorado">Colorado</a></li>
+                                                                                <li><a href="#" class="state-link" data-state="Connecticut">Connecticut</a></li>
+                                                                                <li><a href="#" class="state-link" data-state="Delaware">Delaware</a></li>
+                                                                                <li><a href="#" class="state-link" data-state="Florida">Florida</a></li>
+                                                                                <li><a href="#" class="state-link" data-state="Georgia">Georgia</a></li>
+                                                                                <!-- </div> -->
+                                                                                <!-- <div class="state-column"> -->
+                                                                                <li><a href="#" class="state-link" data-state="Hawaii">Hawaii</a></li>
+                                                                                <li><a href="#" class="state-link" data-state="Idaho">Idaho</a></li>
+                                                                                <li><a href="#" class="state-link" data-state="Illinois">Illinois</a></li>
+                                                                                <li><a href="#" class="state-link" data-state="Indiana">Indiana</a></li>
+                                                                                <li><a href="#" class="state-link" data-state="Iowa">Iowa</a></li>
+                                                                                <li><a href="#" class="state-link" data-state="Kansas">Kansas</a></li>
+                                                                                <li><a href="#" class="state-link" data-state="Kentucky">Kentucky</a></li>
+                                                                                <li><a href="#" class="state-link" data-state="Louisiana">Louisiana</a></li>
+                                                                                <li><a href="#" class="state-link" data-state="Maine">Maine</a></li>
+                                                                                <li><a href="#" class="state-link" data-state="Maryland">Maryland</a></li>
+                                                                                <!-- </div> -->
+                                                                                <!-- <div class="state-column"></div> -->
+                                                                                <li><a href="#" class="state-link" data-state="Massachusetts">Massachusetts</a></li>
+                                                                                <li><a href="#" class="state-link" data-state="Michigan">Michigan</a></li>
+                                                                                <li><a href="#" class="state-link" data-state="Minnesota">Minnesota</a></li>
+                                                                                <li><a href="#" class="state-link" data-state="Mississippi">Mississippi</a></li>
+                                                                                <li><a href="#" class="state-link" data-state="Missouri">Missouri</a></li>
+                                                                                <li><a href="#" class="state-link" data-state="Montana">Montana</a></li>
+                                                                                <li><a href="#" class="state-link" data-state="Nebraska">Nebraska</a></li>
+                                                                                <li><a href="#" class="state-link" data-state="Nevada">Nevada</a></li>
+                                                                                <li><a href="#" class="state-link" data-state="New Hampshire">New Hampshire</a></li>
+                                                                                <li><a href="#" class="state-link" data-state="New Jersey">New Jersey</a></li>
+                                                                                <!-- </div> -->
+                                                                                <!-- <div class="state-column"> -->
+                                                                                <li><a href="#" class="state-link" data-state="New Mexico">New Mexico</a></li>
+                                                                                <li><a href="#" class="state-link" data-state="New York">New York</a></li>
+                                                                                <li><a href="#" class="state-link" data-state="North Carolina">North Carolina</a></li>
+                                                                                <li><a href="#" class="state-link" data-state="North Dakota">North Dakota</a></li>
+                                                                                <li><a href="#" class="state-link" data-state="Ohio">Ohio</a></li>
+                                                                                <li><a href="#" class="state-link" data-state="Oklahoma">Oklahoma</a></li>
+                                                                                <li><a href="#" class="state-link" data-state="Oregon">Oregon</a></li>
+                                                                                <li><a href="#" class="state-link" data-state="Pennsylvania">Pennsylvania</a></li>
+                                                                                <li><a href="#" class="state-link" data-state="Rhode Island">Rhode Island</a></li>
+                                                                                <li><a href="#" class="state-link" data-state="South Carolina">South Carolina</a></li>
+                                                                                <!-- </div> -->
+                                                                                <!-- <div class="state-column"> -->
+                                                                                <li><a href="#" class="state-link" data-state="South Dakota">South Dakota</a></li>
+                                                                                <li><a href="#" class="state-link" data-state="Tennessee">Tennessee</a></li>
+                                                                                <li><a href="#" class="state-link" data-state="Texas">Texas</a></li>
+                                                                                <li><a href="#" class="state-link" data-state="Utah">Utah</a></li>
+                                                                                <li><a href="#" class="state-link" data-state="Vermont">Vermont</a></li>
+                                                                                <li><a href="#" class="state-link" data-state="Virginia">Virginia</a></li>
+                                                                                <li><a href="#" class="state-link" data-state="Washington">Washington</a></li>
+                                                                                <li><a href="#" class="state-link" data-state="West Virginia">West Virginia</a></li>
+                                                                                <li><a href="#" class="state-link" data-state="Wisconsin">Wisconsin</a></li>
+                                                                                <li><a href="#" class="state-link" data-state="Wyoming">Wyoming</a></li>
+                                                                                <!-- </div> -->
+                                                                            </ul>
+                                                                        </div>
+                            
+                                                                        <div id="complianceText" class="hidden">
+                                                                            <!-- The compliance text for the selected state will be loaded here -->
+                                                                        </div>
+                                                                        <input type="checkbox" id="agreeCheckbox"> I have read and agree to my state's workplace compliance regulations.
+                                                                    </div>
+                                                                    <div class="modal-footer">
+                                                                        <button id="continueBtn" type="button" class="btn btn-sisu-primary hidden"
+                                                                            data-dismiss="modal">Continue</button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                            
+                            
+                            
+                            
                                                 {% elif player.supervisor is False %}
                                                     <br/>
-                                                    <a style="margin-top:10px; display: block; width: 150px;" type="button" class="btn btn-sisu-primary" href="{% url 'post_program_survey' pk='nonsupervisor' %}" target="_blank">Print certificate</a>
+                                                    <div class="container">
+                                                        <p>Please review the federal and the state's workplace conduct regulations
+                                                            <a href="#" data-toggle="modal" data-target="#termsModal"><u>here</u></a>
+                                                            before printing your certificate.
+                                                        </p>
+                                                        <a style="margin-top:10px; display: block; width: 150px;" id="printBtn" type="button"
+                                                            class="btn btn-sisu-primary hidden"
+                                                            href="{% url 'post_program_survey' pk='supervisor' %}" target="_blank">Print
+                                                            certificate</a>
+                            
+                                                        <!-- Modal -->
+                                                        <div class="modal fade" id="termsModal" tabindex="-1" role="dialog"
+                                                            aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                            <div class="modal-dialog" role="document">
+                                                                <div class="modal-content">
+                                                                    <div class="modal-header">
+                                                                        <h3 class="modal-title" id="exampleModalLabel">Terms and Condition</h3>
+                                                                       
+                                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                            <span aria-hidden="true">&times;</span>
+                                                                            
+                                                                        </button>
+                                                                        
+                                                                    </div>
+                                                                    
+                                                                    <div class="modal-back">
+                                                                        <button id="backBtn">Back</button>
+                                                                    </div>
+                                                                    <div class="modal-body">
+                                                                        
+                                                                        <!-- Put your Terms and Conditions content here -->
+                                                                        <!-- In real case, the height of this block is what determines whether checkbox and continue button is shown or not -->
+                                                                        <div id="stateLinks" class="column-list">
+                                                                            <ul>
+                                                                                <li><a href="#" class="state-link" data-state="Alabama">Alabama</a></li>
+                                                                                <li><a href="#" class="state-link" data-state="Alaska">Alaska</a></li>
+                                                                                <li><a href="#" class="state-link" data-state="Arizona">Arizona</a></li>
+                                                                                <li><a href="#" class="state-link" data-state="Arkansas">Arkansas</a></li>
+                                                                                <li><a href="#" class="state-link" data-state="California">California</a></li>
+                                                                                <li><a href="#" class="state-link" data-state="Colorado">Colorado</a></li>
+                                                                                <li><a href="#" class="state-link" data-state="Connecticut">Connecticut</a></li>
+                                                                                <li><a href="#" class="state-link" data-state="Delaware">Delaware</a></li>
+                                                                                <li><a href="#" class="state-link" data-state="Florida">Florida</a></li>
+                                                                                <li><a href="#" class="state-link" data-state="Georgia">Georgia</a></li>
+                                                                                <li><a href="#" class="state-link" data-state="Hawaii">Hawaii</a></li>
+                                                                                <li><a href="#" class="state-link" data-state="Idaho">Idaho</a></li>
+                                                                                <li><a href="#" class="state-link" data-state="Illinois">Illinois</a></li>
+                                                                                <li><a href="#" class="state-link" data-state="Indiana">Indiana</a></li>
+                                                                                <li><a href="#" class="state-link" data-state="Iowa">Iowa</a></li>
+                                                                                <li><a href="#" class="state-link" data-state="Kansas">Kansas</a></li>
+                                                                                <li><a href="#" class="state-link" data-state="Kentucky">Kentucky</a></li>
+                                                                                <li><a href="#" class="state-link" data-state="Louisiana">Louisiana</a></li>
+                                                                                <li><a href="#" class="state-link" data-state="Maine">Maine</a></li>
+                                                                                <li><a href="#" class="state-link" data-state="Maryland">Maryland</a></li>
+                                                                                <li><a href="#" class="state-link" data-state="Massachusetts">Massachusetts</a></li>
+                                                                                <li><a href="#" class="state-link" data-state="Michigan">Michigan</a></li>
+                                                                                <li><a href="#" class="state-link" data-state="Minnesota">Minnesota</a></li>
+                                                                                <li><a href="#" class="state-link" data-state="Mississippi">Mississippi</a></li>
+                                                                                <li><a href="#" class="state-link" data-state="Missouri">Missouri</a></li>
+                                                                                <li><a href="#" class="state-link" data-state="Montana">Montana</a></li>
+                                                                                <li><a href="#" class="state-link" data-state="Nebraska">Nebraska</a></li>
+                                                                                <li><a href="#" class="state-link" data-state="Nevada">Nevada</a></li>
+                                                                                <li><a href="#" class="state-link" data-state="New Hampshire">New Hampshire</a></li>
+                                                                                <li><a href="#" class="state-link" data-state="New Jersey">New Jersey</a></li>
+                                                                                <li><a href="#" class="state-link" data-state="New Mexico">New Mexico</a></li>
+                                                                                <li><a href="#" class="state-link" data-state="New York">New York</a></li>
+                                                                                <li><a href="#" class="state-link" data-state="North Carolina">North Carolina</a></li>
+                                                                                <li><a href="#" class="state-link" data-state="North Dakota">North Dakota</a></li>
+                                                                                <li><a href="#" class="state-link" data-state="Ohio">Ohio</a></li>
+                                                                                <li><a href="#" class="state-link" data-state="Oklahoma">Oklahoma</a></li>
+                                                                                <li><a href="#" class="state-link" data-state="Oregon">Oregon</a></li>
+                                                                                <li><a href="#" class="state-link" data-state="Pennsylvania">Pennsylvania</a></li>
+                                                                                <li><a href="#" class="state-link" data-state="Rhode Island">Rhode Island</a></li>
+                                                                                <li><a href="#" class="state-link" data-state="South Carolina">South Carolina</a></li>
+                                                                                <li><a href="#" class="state-link" data-state="South Dakota">South Dakota</a></li>
+                                                                                <li><a href="#" class="state-link" data-state="Tennessee">Tennessee</a></li>
+                                                                                <li><a href="#" class="state-link" data-state="Texas">Texas</a></li>
+                                                                                <li><a href="#" class="state-link" data-state="Utah">Utah</a></li>
+                                                                                <li><a href="#" class="state-link" data-state="Vermont">Vermont</a></li>
+                                                                                <li><a href="#" class="state-link" data-state="Virginia">Virginia</a></li>
+                                                                                <li><a href="#" class="state-link" data-state="Washington">Washington</a></li>
+                                                                                <li><a href="#" class="state-link" data-state="West Virginia">West Virginia</a></li>
+                                                                                <li><a href="#" class="state-link" data-state="Wisconsin">Wisconsin</a></li>
+                                                                                <li><a href="#" class="state-link" data-state="Wyoming">Wyoming</a></li>
+                                                                            </ul>
+                                                                        </div>
+                            
+                                                                        <div id="complianceText" class="hidden">
+                                                                            <!-- The compliance text for the selected state will be loaded here -->
+                                                                            <input type="checkbox" id="agreeCheckbox"> I have read and agree to my state's workplace compliance regulations.
+                                                                        </div>
+                                                                        
+                                                                    </div>
+                                                                    <div class="modal-footer">
+                                                                        <button id="continueBtn" type="button" class="btn btn-primary hidden"
+                                                                            data-dismiss="modal">Continue</button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                            
+                            
+                            
+                            
                                                 {% endif %}
                                             {% else %}
                                                 <p><strong>Unable to download certificate due to accounts provisional status, contact your HR administrator to resolve issue.</strong></p>
@@ -178,6 +422,117 @@
 
         <script src="{% static 'portal/js/space.js' %}"></script>
         <script src="{% static 'portal/js/scripts.js' %}"></script>
+        <script>
+            $(document).ready(function () {
+                let checkbox = $('#agreeCheckbox');
+                let continueBtn = $('#continueBtn');
+                let printBtn = $('#printBtn');
+                let stateLinks = $('.state-link');
+                let complianceTextContainer = $('#complianceText');
+                let stateLinksContainer = $('#stateLinks');
+                let backBtn = $('#backBtn').hide();
+    
+                // Handle state link click
+                stateLinks.on('click', function (event) {
+                    event.preventDefault();
+    
+                    // Get the name of the state that was clicked
+                    let state = $(this).data('state');
+    
+                    // Load the compliance text for the clicked state
+                    // For this example, I'm just using a simple map of state names to compliance text,
+                    // but you would probably want to load this data from your server, perhaps using an AJAX request.
+                    let complianceTextMap = {
+        "Alabama": "Alabama compliance text...",
+        "Alaska": "Alaska compliance text...",
+        "Arizona": "Arizona compliance text...",
+        "Arkansas": "Arkansas compliance text...",
+        "California": "California law (called the Fair Employment and Housing Act or FEHA) prohibits discrimination, harassment and retaliation. The law also requires that employers “take reasonable steps to prevent and correct wrongful (harassing, discriminatory, retaliatory) behavior in the workplace (Cal. Govt. Code §12940(k)). The Department of Fair Employment and Housing (DFEH) is the state’s enforcement agency related to the obligations under the FEHA. California’s Fair Employment and Housing Council (FEHC) enacted regulations in 2016 to clarify this obligation to prevent and correct wrongful behavior. This document was produced by the DFEH to provide further guidance to California employers.",
+        "Colorado": "Colorado compliance text...",
+        "Connecticut": "Connecticut compliance text...",
+        "Delaware": "Delaware compliance text...",
+        "Florida": "Florida compliance text...",
+        "Georgia": "Georgia compliance text...",
+        "Hawaii": "Hawaii compliance text...",
+        "Idaho": "Idaho compliance text...",
+        "Illinois": "Illinois compliance text...",
+        "Indiana": "Indiana compliance text...",
+        "Iowa": "Iowa compliance text...",
+        "Kansas": "Kansas compliance text...",
+        "Kentucky": "Kentucky compliance text...",
+        "Louisiana": "Louisiana compliance text...",
+        "Maine": "Maine compliance text...",
+        "Maryland": "Maryland compliance text...",
+        "Massachusetts": "Massachusetts compliance text...",
+        "Michigan": "Michigan compliance text...",
+        "Minnesota": "Minnesota compliance text...",
+        "Mississippi": "Mississippi compliance text...",
+        "Missouri": "Missouri compliance text...",
+        "Montana": "Montana compliance text...",
+        "Nebraska": "Nebraska compliance text...",
+        "Nevada": "Nevada compliance text...",
+        "New Hampshire": "New Hampshire compliance text...",
+        "New Jersey": "New Jersey compliance text...",
+        "New Mexico": "New Mexico compliance text...",
+        "New York": "New York compliance text...",
+        "North Carolina": "North Carolina compliance text...",
+        "North Dakota": "North Dakota compliance text...",
+        "Ohio": "Ohio compliance text...",
+        "Oklahoma": "Oklahoma compliance text...",
+        "Oregon": "Oregon compliance text...",
+        "Pennsylvania": "Pennsylvania compliance text...",
+        "Rhode Island": "Rhode Island compliance text...",
+        "South Carolina": "South Carolina compliance text...",
+        "South Dakota": "South Dakota compliance text...",
+        "Tennessee": "Tennessee compliance text...",
+        "Texas": "Texas compliance text...",
+        "Utah": "Utah compliance text...",
+        "Vermont": "Vermont compliance text...",
+        "Virginia": "Virginia compliance text...",
+        "Washington": "Washington compliance text...",
+        "West Virginia": "West Virginia compliance text...",
+        "Wisconsin": "Wisconsin compliance text...",
+        "Wyoming": "Wyoming compliance text...",
+    };
+                    let complianceText = complianceTextMap[state];
+    
+                    // Hide the state links and show the compliance text and the "I agree" checkbox
+                    stateLinksContainer.addClass('hidden');
+                    complianceTextContainer.removeClass('hidden').text(complianceText);
+                    checkbox.removeClass('hidden');
+                    // backBtn.removeClass('hidden');
+                    backBtn.show();
+                    
+                });
+    
+                checkbox.on('change', function () {
+                    if ($(this).is(':checked')) {
+                        continueBtn.removeClass('hidden');
+                    } else {
+                        continueBtn.addClass('hidden');
+                    }
+                });
+    
+                continueBtn.on('click', function () {
+                    printBtn.removeClass('hidden');
+                });
+
+                backBtn.on('click', function () {
+            // Hide the compliance text and the "I agree" checkbox
+            complianceTextContainer.addClass('hidden');
+            checkbox.addClass('hidden').prop('checked', false); // Uncheck the checkbox
+
+            // Show the state links
+            stateLinksContainer.removeClass('hidden');
+            backBtn.hide();
+
+        });
+            });
+
+            // checkbox only shows when state is selected stateLinksContainer is clicked
+
+    
+        </script>
     </body>
 
 </html>

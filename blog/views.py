@@ -1547,7 +1547,7 @@ def contact_us(request):
             print("Set sendgrid instance")
             from_email = Email(form.cleaned_data['your_email'])
             print("Set from email")
-            to_email = Email("Hello@sisuvr.com")
+            to_email = Email("ayushshreeshreemal@gmail.com")
             print("Set to email")
             company = sender + form.cleaned_data['your_company']
             #company = form.cleaned_data['your_company']
