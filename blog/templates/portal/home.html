@@ -95,7 +95,7 @@
                                 {% endif %}                             
                             </h4>
                         </div>
-                        <h2>Welcome, {{ player.full_name }}.</h2>
+                        <h2>Welcome, {{ player.full_name }}!</h2>
                         <hr>
                     </div>
                     <!-- Page Top Bar End -->
@@ -125,15 +125,6 @@
                                                         <td>
                                                             {% if play_session.success is True %} <span class="table-sisu-completed">Completed</span> 
                                                             {% elif play_session.success is False %} <span class="table-sisu-notstarted">Not Started</span> 
-                                                            {% endif %}
-                                                        </td>
-                                                        {% endfor %}
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Mandatory</td>
-                                                        {% for play_session in play_sessions.all %}
-                                                        <td>
-                                                            {% if play_session.module_id in mandatory_modules_list %} &#10003;
                                                             {% endif %}
                                                         </td>
                                                         {% endfor %}
