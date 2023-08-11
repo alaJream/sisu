@@ -50,7 +50,6 @@ from django.contrib.auth.forms import PasswordChangeForm
 from django.contrib.auth.password_validation import validate_password
 
 
-
 def index(request):
     context = {}
     if request.method == 'POST':
@@ -1231,7 +1230,7 @@ def post_program_survey(request, pk):
 
     if pk == "supervisor" and isSupervisor:
         # show certificate if user already completed the survey
-        if PostProgramSurveySupervisor.objects.filter(user=request.user).count() == 1:
+        if PostProgramSurveySupervisor.objects.filter(user=request.user).count() == 8:
             return redirect('/portal/certificate/')
 
         else:
